@@ -1,76 +1,134 @@
-import Image from 'next/image';
-import { ArrowDown, ArrowUpRight, MoveUpRight } from 'lucide-react';
-import { ProjectCard } from '@/components/cards/ProjectCard';
-import { prototypeProjects } from '@/lib/prototype-projects';
+import ProjectCard from '@/components/ProjectCard';
+import Footer from '@/components/Footer';
+import { projects } from '@/lib/projects';
+import Link from 'next/link';
+import { ImagesBadge } from '@/components/ui/images-badge';
+import RevealOnScroll from '@/components/RevealOnScroll';
+import InfinitePicturesCarousel from '@/components/InfinitePicturesCarousel';
+import ContactCard from '@/components/ContactCard';
+import { HomeHeroMotion } from '@/components/HomeHeroMotion';
+import { HomeExpandableCards } from '@/components/HomeExpandableCards';
+import { Terminal } from '@/components/ui/terminal';
 
 export default function Home() {
   return (
-    <main id="main-content">
-      <div id="top" />
-      <section className="hero page-shell" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow"><span className="eyebrow-line" /> LOUIS CHAN / GAME DESIGNER</p>
-          <h1 id="hero-title">Designing for<br /><em>curiosity.</em></h1>
-          <p className="hero-intro">I shape spaces, systems, and stories around what players notice, question, and remember.</p>
-          <div className="hero-links">
-            <a className="button button-primary" href="#projects">Explore selected work <ArrowUpRight size={18} aria-hidden="true" /></a>
-            <a className="text-link" href="#about">About me <ArrowDown size={17} aria-hidden="true" /></a>
-          </div>
-          <div className="hero-discipline-list" aria-label="Design interests">
-            <span>LEVEL DESIGN</span><span>GAMEPLAY DESIGN</span><span>PUZZLE DESIGN</span><span>STORYTELLING</span>
-          </div>
-        </div>
-        <div className="hero-visual" aria-hidden="true">
-          <div className="hero-visual-top"><span>PLAYER EXPERIENCE / DESIGN PROCESS</span><span>01—04</span></div>
-          <div className="hero-drawing">
-            <span className="hero-orbit hero-orbit-one" /><span className="hero-orbit hero-orbit-two" />
-            <span className="hero-path hero-path-one" /><span className="hero-path hero-path-two" />
-            <span className="hero-node hero-node-one" /><span className="hero-node hero-node-two" /><span className="hero-node hero-node-three" />
-            <span className="hero-drawing-word">SPACE <i>→</i> CHOICE <i>→</i> FEELING</span>
-          </div>
-          <div className="hero-visual-bottom"><span>OBSERVE / TEST / ITERATE</span><span>DESIGN NOTE 001</span></div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
+      <main className="mx-auto max-w-7xl px-6 pt-24">
+        {/* ── A) HERO ─────────────────────────────────────────────── */}
+        <section className="mt-24 sm:mt-48 lg:mt-40 mb-16 flex flex-col items-center text-center">
+          <h1 className="mb-8 text-[clamp(6rem,18vw,16rem)] font-black leading-[0.8] tracking-[-0.07em] wrap-break-word text-neutral-900 dark:text-neutral-100">
+            Louis
+          </h1>
+          <p className="text-lg font-semibold uppercase tracking-[0.24em] text-neutral-600 dark:text-neutral-300 sm:text-xl">
+            Full Stack Developer
+          </p>
 
-      <section className="section projects-section" id="projects" aria-labelledby="projects-title">
-        <div className="page-shell">
-          <div className="section-heading">
-            <div><p className="section-index">01 / SELECTED WORK</p><h2 id="projects-title">Featured projects<span className="heading-period">.</span></h2></div>
-            <p className="section-lede">A selection of game design work, each with its own visual language.</p>
-          </div>
-          <div className="project-grid">{prototypeProjects.map((project) => <ProjectCard key={project.title} project={project} />)}</div>
-        </div>
-      </section>
+          <HomeHeroMotion />
+        </section>
 
-      <section className="section evidence-section" id="case-studies" aria-labelledby="studies-title">
-        <div className="page-shell evidence-grid">
-          <div><p className="section-index">02 / THE THINKING BEHIND THE WORK</p><h2 id="studies-title">Show the<br /><em>decisions.</em></h2></div>
-          <div className="evidence-copy"><p>Good design work leaves a trail: the original question, the constraints, what players did, and what changed as a result.</p></div>
-        </div>
-      </section>
+        {/* ── EXPANDABLE CARDS ────────────────────────────────────── */}
+        <RevealOnScroll>
+          <section className="mt-12 sm:mt-40 lg:mt-36 mb-10 gap-4">
+            <HomeExpandableCards />
+          </section>
+        </RevealOnScroll>
 
-      <section className="section currently-section" id="currently-designing" aria-labelledby="current-title">
-        <div className="page-shell currently-grid">
-          <div className="currently-image">
-            <Image src="/site/usher-visual-study.svg" alt="Illustrative House of Usher architectural study; not gameplay." fill sizes="(max-width: 760px) 100vw, 45vw" />
-            <span className="media-placeholder-label">ILLUSTRATIVE VISUAL STUDY · NOT GAMEPLAY</span>
-          </div>
-          <div className="currently-copy"><p className="section-index">03 / ON THE DESIGN DESK</p><span className="status-chip"><span /> CURRENTLY DESIGNING</span><h2 id="current-title">House of<br /><em>Usher.</em></h2><p>House of Usher is in development.</p><div className="current-footer"><span>ACTIVE PROJECT / 2026</span><MoveUpRight size={25} aria-hidden="true" /></div></div>
-        </div>
-      </section>
+        {/* ── Infinite Pictures ────────────────────────────────────── */}
+        <RevealOnScroll>
+          <section className="mt-16 mb-12 space-y-8 sm:mt-28 lg:mt-36">
+            {/* Title row */}
+            <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl md:text-5xl">
+              Quick Glance
+            </h2>
 
-      <section className="section writing-section" id="writing" aria-labelledby="writing-title">
-        <div className="page-shell writing-grid">
-          <div><p className="section-index">04 / NOTES ON DESIGN</p><h2 id="writing-title">Writing for<br /><em>designers.</em></h2></div>
-          <div className="writing-types"><p>Notes on design decisions, player experiences, and the details that shape play.</p></div>
-        </div>
-      </section>
+            {/* Copy */}
+            <div className="space-y-4">
+              <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
+                I build production-ready systems by turning complex ideas into clear, reliable products. I focus on
+                software that feels simple to use, while being thoughtfully designed and robust under the hood.
+              </p>
 
-      <section className="section closing-section" id="about" aria-labelledby="about-title">
-        <div className="page-shell closing-grid"><div><p className="section-index">05 / ABOUT & CONTACT</p><h2 id="about-title">Thoughtful design.<br /><em>Memorable play.</em></h2></div><div className="closing-copy"><p>I’m Louis, a game designer interested in how level layout, mechanics, puzzles, and environmental storytelling guide a player’s experience.</p><p>I’d be glad to connect about design work and opportunities.</p><a className="button button-outline" href="mailto:louiscch314@gmail.com">Get in touch <ArrowUpRight size={18} aria-hidden="true" /></a></div></div>
-      </section>
+              <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
+                Beyond code, I value continuous growth through building and problem-solving—applying each experience to
+                improve how I design systems, make decisions, and execute in real-world environments.
+              </p>
+            </div>
 
-      <div id="resume" className="resume-anchor page-shell"><span>RESUME</span><a href="mailto:louiscch314@gmail.com?subject=Resume%20request">Request current resume <ArrowUpRight size={15} aria-hidden="true" /></a></div>
-    </main>
+            {/* Carousel */}
+            <div className="pt-2">
+              <InfinitePicturesCarousel />
+            </div>
+
+            {/* Soft divider + compact CTA */}
+            <div className="pt-4">
+              <div className="h-px w-full bg-linear-to-r from-transparent via-black/10 to-transparent dark:via-white/10" />
+              <div className="pt-6 mx-auto max-w-4xl">
+                <ContactCard />
+              </div>
+            </div>
+          </section>
+        </RevealOnScroll>
+
+        {/* ── B) Projects ────────────────────────────────────── */}
+        <RevealOnScroll>
+          <section className="my-16">
+            <div className="flex items-center justify-between mb-5">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+                Projects
+              </h2>
+              <Link href="/projects" className="self-end">
+                <ImagesBadge
+                  text="View all →"
+                  className="hover:underline"
+                  images={['/paper-bridge-logo.webp', '/store-logo.png', '/my-last-day-logo.webp']}
+                  folderSize={{ width: 24, height: 18 }}
+                  teaserImageSize={{ width: 14, height: 10 }}
+                  hoverImageSize={{ width: 36, height: 24 }}
+                  hoverTranslateY={-28}
+                  hoverSpread={14}
+                />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {projects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          </section>
+        </RevealOnScroll>
+
+        {/* ── C) About Me ─────────────────────────────────────── */}
+        <RevealOnScroll>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mb-12">
+            About Me
+          </h2>
+          <section className="mb-16">
+            <Terminal
+              commands={['whoami', 'focus', 'shipped', 'stack', 'values']}
+              outputs={{
+                0: ['Louis Chan — Full-Stack Developer'],
+                1: ['Production-ready AI systems, e-commerce platforms, backend architecture'],
+                2: [
+                  'Paper Bridge — RAG document intelligence platform',
+                  'PopBox Studio — Stripe-powered e-commerce platform',
+                ],
+                3: ['Next.js · Vercel · Node.js · TypeScript · FastAPI · PostgreSQL · Supabase · Stripe'],
+                4: ['Clean architecture · Performance · Practical product thinking'],
+              }}
+              username="louis@portfolio"
+              className="mt-6 max-w-2xl"
+              typingSpeed={22}
+              delayBetweenCommands={320}
+              initialDelay={120}
+              enableSound={false}
+            />
+          </section>
+        </RevealOnScroll>
+      </main>
+
+      {/* ── D) FOOTER ───────────────────────────────────────────── */}
+      <Footer />
+    </div>
   );
 }

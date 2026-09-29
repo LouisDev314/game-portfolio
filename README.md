@@ -1,14 +1,32 @@
-# Louis Chan — Game Design Portfolio
+# Game Portfolio Starter
 
-This is a new, independent Next.js portfolio for game design work. It does not share code or content with the software engineering portfolio.
+This independent repository starts from a copy of `my-portfolio`. Its current pages and project content still describe Louis Chan's software engineering work. Build the game portfolio here; the original `my-portfolio` repository is unchanged.
 
-## Current stage
+Before publishing a distinct game portfolio, replace the copied content and set its own canonical URL in `lib/site.ts`.
 
-Phase 1 is a **visual homepage prototype**. It includes a responsive editorial layout, light/dark theme, navigation, featured project presentation, a Currently Designing section, writing/case-study previews, and contact links.
+## Original Site
 
-The House of Usher and Shell images are clearly labeled illustrative placeholders, not gameplay captures. Project detail routes, MDX content, case studies, articles, and the HTML/PDF resume are planned for later phases after visual review.
+[https://www.louisdev314.com/](https://www.louisdev314.com/)
 
-## Run locally
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19 and TypeScript
+- Tailwind CSS v4
+- Motion for focused UI transitions
+- Three.js, React Three Fiber, and Drei for the interactive globe
+- Vercel Analytics and Speed Insights
+- ESLint, TypeScript, Prettier, and pnpm
+
+## Highlights
+
+- Recruiter-friendly portfolio structure with dedicated home, projects, about, contact, links, uses, privacy, and terms pages.
+- Data-driven project case studies for Paper Bridge and PopBox Studio, including project descriptions, technical highlights, tech stacks, and live/repo/demo links when available.
+- Reusable component system for cards, modals, badges, navigation, contact actions, project cards, timelines, theme controls, and scroll/reveal interactions.
+- Responsive dark/light UI built with accessible HTML content, centralized site metadata, canonical URL, Open Graph metadata, and Twitter metadata.
+- Performance-oriented Next.js implementation using App Router layouts, local assets, Vercel Speed Insights, and client components only where interactivity is needed.
+
+## Local Development
 
 ```bash
 pnpm install
@@ -17,7 +35,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Checks
+Useful checks:
 
 ```bash
 pnpm lint
@@ -25,4 +43,14 @@ pnpm typecheck
 pnpm build
 ```
 
-The intended review at this stage is visual: assess typography, media layout, spacing, project cards, and both themes at desktop and mobile widths before approving the content-system phase.
+Or run all three:
+
+```bash
+pnpm check
+```
+
+## Contact
+
+- GitHub: [@LouisDev314](https://github.com/LouisDev314)
+- LinkedIn: [linkedin.com/in/lcch](https://www.linkedin.com/in/lcch/)
+- Email: [louiscch314@gmail.com](mailto:louiscch314@gmail.com)
