@@ -1,4 +1,3 @@
-/** Phase 1 display data. Replace with validated MDX content after visual review. */
 export type PrototypeProject = {
   title: string;
   eyebrow: string;
@@ -14,7 +13,7 @@ export const prototypeProjects: PrototypeProject[] = [
   {
     title: 'House of Usher',
     eyebrow: 'In development',
-    summary: 'An active design project. Gameplay, level documentation, and iteration evidence will be added to its dedicated page.',
+    summary: 'An active game design project.',
     image: '/site/usher-visual-study.svg',
     imageAlt: 'Illustrative architectural visual study for House of Usher; not a gameplay screenshot.',
     tags: ['Level Design', 'Puzzle Design', 'Environmental Storytelling'],
@@ -24,7 +23,7 @@ export const prototypeProjects: PrototypeProject[] = [
   {
     title: 'Shell',
     eyebrow: 'Selected project',
-    summary: 'A second featured game design project. Project details and verified media will be added in the content phase.',
+    summary: 'Selected game design work.',
     image: '/site/shell-visual-study.svg',
     imageAlt: 'Illustrative abstract visual study for Shell; not a gameplay screenshot.',
     tags: ['Game Design'],

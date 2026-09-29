@@ -123,14 +123,12 @@ button { font: inherit; }
 .project-card p { max-width: 520px; min-height: 55px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
 .tag { padding: 7px 10px; border: 1px solid var(--line); color: var(--muted); font-size: 10px; font-weight: 700; }
-.prototype-note { margin: 23px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .evidence-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .evidence-grid, .writing-grid, .closing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9%; }
 .evidence-copy { max-width: 590px; padding-top: 20px; }
 .evidence-copy p, .closing-copy p { margin: 0 0 23px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; color: var(--muted); }
 .evidence-copy p:first-child { color: var(--ink); }
-.in-progress-label { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .16em; }
 
 .currently-section { padding: 0; background: var(--surface-alt); }
 .currently-grid { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 620px; }
@@ -145,13 +143,7 @@ button { font: inherit; }
 
 .writing-section { background: var(--surface); }
 .writing-types { padding-top: 15px; }
-.writing-types > div { display: grid; grid-template-columns: 42px 1fr 24px; gap: 16px; padding: 28px 0; border-bottom: 1px solid var(--line); }
-.writing-types > div:first-child { border-top: 1px solid var(--line); }
-.writing-types > div > span { color: var(--accent); font-size: 11px; font-weight: 800; }
-.writing-types h3 { margin: -5px 0 9px; font-family: var(--serif); font-size: 29px; font-weight: 400; letter-spacing: -.04em; }
-.writing-types p { max-width: 450px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
-.writing-types > div > svg { color: var(--accent); }
-.writing-note { margin: 21px 0 0; color: var(--muted); font-size: 12px; }
+.writing-types p { max-width: 450px; margin: 0; padding-top: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: clamp(17px, 1.4vw, 20px); line-height: 1.65; }
 
 .closing-section { border-top: 1px solid var(--line); }
 .closing-copy { padding-top: 16px; }

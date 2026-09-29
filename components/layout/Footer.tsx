@@ -16,7 +16,6 @@ export function Footer() {
       </div>
       <div className="page-shell footer-bottom">
         <span>© {new Date().getFullYear()} Louis Chan</span>
-        <span>Phase 1 visual prototype</span>
       </div>
     </footer>
   );
