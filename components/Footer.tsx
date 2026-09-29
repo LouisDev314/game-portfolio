@@ -59,7 +59,7 @@ export default function Footer({ homeOverlap = false }: { homeOverlap?: boolean 
         <div className="flex items-center gap-2">
           <div className="size-8">
             <Image
-              src="/portfolio-logo.webp"
+              src="/pfp-1.jpg"
               alt="My portfolio logo"
               width={32}
               height={32}

@@ -8,16 +8,16 @@ import TechStack from '@/components/TechStack';
 const cards: CardItem[] = [
   {
     id: 'canada',
-    title: 'Based in Canada',
-    description: 'Remote',
+    title: 'Location',
+    description: 'Based in Canada',
     icon: MapPin,
     iconColor: 'text-red-600',
     content: () => <Globe />,
   },
   {
-    id: 'tech-stack',
-    title: 'Tech Stack',
-    description: 'Skill set',
+    id: 'skills',
+    title: 'Skills',
+    description: 'Overview',
     icon: Layers,
     iconColor: 'text-indigo-500',
     content: () => <TechStack />,
@@ -25,5 +25,5 @@ const cards: CardItem[] = [
 ];
 
 export function HomeExpandableCards() {
-  return <ExpandableCard cards={cards} />;
+  return <ExpandableCard cards={cards} className="lg:justify-between" />;
 }

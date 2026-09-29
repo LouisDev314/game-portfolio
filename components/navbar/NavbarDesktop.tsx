@@ -11,9 +11,9 @@ import { siteConfig } from '@/lib/site';
 
 const NAV_ITEMS = [
   { name: 'Home', href: '/' },
-  { name: 'About Me', href: '/about' },
   { name: 'Projects', href: '/projects' },
   { name: 'Blogs', href: '/blogs' },
+  { name: 'About Me', href: '/about' },
 ];
 
 const SECONDARY_NAV_ITEMS = [
@@ -37,7 +37,7 @@ export function NavbarDesktop() {
           )}>
           <div className="flex items-center space-x-3 shrink-0">
             <Image
-              src="/portfolio-logo.webp"
+              src="/pfp-1.jpg"
               alt="Louis Chan portfolio logo"
               width={32}
               height={32}

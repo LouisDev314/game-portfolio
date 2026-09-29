@@ -8,7 +8,7 @@ export const TextGenerateEffect = ({
   className,
   textClassName,
   filter = true,
-  duration = 0.5,
+  duration = 1.5,
 }: {
   words: string;
   className?: string;
@@ -17,7 +17,7 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(' ');
+  const wordsArray = words.split(' ');
   useEffect(() => {
     animate(
       'span',
@@ -30,16 +30,16 @@ export const TextGenerateEffect = ({
         delay: stagger(0.2),
       },
     );
-  }, [scope.current]);
+  }, [animate, duration, filter]);
 
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <motion.div ref={scope} className={cn('font-medium text-lg leading-snug tracking-wide', className, textClassName)}>
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className="opacity-0"
               style={{
                 filter: filter ? 'blur(10px)' : 'none',
               }}>
@@ -51,13 +51,5 @@ export const TextGenerateEffect = ({
     );
   };
 
-  return (
-    <div className={cn('font-medium', className)}>
-      <div className="mt-4">
-        <div className={cn('dark:text-white text-black text-lg leading-snug tracking-wide', textClassName)}>
-          {renderWords()}
-        </div>
-      </div>
-    </div>
-  );
+  return renderWords();
 };

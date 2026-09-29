@@ -54,7 +54,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           className="absolute left-8.75 top-0 z-50 -translate-x-1/2">
           <div className="relative size-10 rounded-full bg-white dark:bg-black flex items-center justify-center shadow-md ring-1 ring-black/5 dark:ring-white/10">
             <Image
-              src="/linkedin-pfp.webp"
+              src="/pfp-1.jpg"
               alt="profile picture"
               fill
               draggable={false}

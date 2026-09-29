@@ -88,7 +88,7 @@ export function NavbarMobile() {
                 aria-label="Toggle navigation menu">
                 <span className="size-8">
                   <Image
-                    src="/portfolio-logo.webp"
+                    src="/pfp-1.jpg"
                     alt="Louis Chan portfolio logo"
                     width={32}
                     height={32}
