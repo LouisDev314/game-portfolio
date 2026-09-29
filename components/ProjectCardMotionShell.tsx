@@ -1,27 +1,23 @@
-'use client';
-
-import { motion, useReducedMotion } from 'motion/react';
-import { JSX, ReactNode } from 'react';
-import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import type { ReactNode } from 'react';
 
 export function ProjectCardMotionShell({
   children,
-  className,
+  slug,
+  title,
 }: {
   children: ReactNode;
-  className?: string;
-}): JSX.Element {
-  const prefersReducedMotion = useReducedMotion();
-
+  slug: string;
+  title: string;
+}) {
   return (
-    <motion.article
-      className={cn(
-        'group flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900 dark:hover:shadow-neutral-900/50 motion-safe:hover:shadow-lg',
-        className,
-      )}
-      whileHover={prefersReducedMotion ? undefined : { y: -4 }}
-      transition={{ type: 'tween', ease: 'easeOut', duration: 0.18 }}>
-      {children}
-    </motion.article>
+    <article>
+      <Link
+        href={`/projects/${slug}`}
+        aria-label={`View ${title} project`}
+        className="group grid overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-colors duration-200 hover:border-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-500 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-600 dark:focus-visible:ring-neutral-300 dark:focus-visible:ring-offset-neutral-950 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+        {children}
+      </Link>
+    </article>
   );
 }

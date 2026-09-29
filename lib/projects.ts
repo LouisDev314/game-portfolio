@@ -1,19 +1,44 @@
 export interface Project {
   id: string;
   name: string;
+  slug: string;
+  tags: string[];
   description: string;
-  highlights?: string[];
-  imgUrl: string;
-  techs: string[];
+  highlights: string[];
+  video: string;
+  poster: string;
   liveUrl?: string;
   demoUrl?: string;
   repoUrl?: string;
+  engine?: string;
 }
+
+const placeholderVideo = '/lastremains-home.mp4';
 
 export const projects: Project[] = [
   {
+    id: '3',
+    name: 'Last Remains',
+    slug: 'last-remains',
+    tags: ['Project Management', 'Production'],
+    description:
+      'A 30+ player PvEvP zombie extraction game where survivors scavenge resources, evade the undead, outplay rival players, and fight to extract alive.',
+    highlights: [
+      'Managed production planning and milestone tracking',
+      'Coordinated work across design, art, and development',
+      'Helped align team priorities around the core extraction experience',
+    ],
+    video: placeholderVideo,
+    poster: '/lastremains.webp',
+    engine: 'Unreal Engine 5',
+    liveUrl: 'https://www.mylastday.xyz',
+    repoUrl: 'https://github.com/LouisDev314/my-last-day',
+  },
+  {
     id: '1',
     name: 'Paper Bridge',
+    slug: 'paper-bridge',
+    tags: ['Software Development', 'AI Systems'],
     description:
       'AI/RAG document intelligence platform for extracting, searching, and asking grounded questions across PDFs.',
     highlights: [
@@ -21,19 +46,8 @@ export const projects: Project[] = [
       'pgvector retrieval and citation-grounded Q&A',
       'FastAPI backend architecture for production workflows',
     ],
-    imgUrl: '/paper-bridge-logo.webp',
-    techs: [
-      'Python',
-      'FastAPI',
-      'Next.js',
-      'TypeScript',
-      'PostgreSQL',
-      'pgvector',
-      'Supabase',
-      'OpenAI API',
-      'Embeddings',
-      'RAG',
-    ],
+    video: placeholderVideo,
+    poster: '/paper-bridge-logo.webp',
     liveUrl: 'https://paper-bridge.vercel.app/dashboard',
     demoUrl: 'https://youtu.be/3FmdrRM75Io',
     repoUrl: 'https://github.com/LouisDev314/paper-bridge',
@@ -41,6 +55,8 @@ export const projects: Project[] = [
   {
     id: '2',
     name: 'PopBox Studio',
+    slug: 'popbox-studio',
+    tags: ['Software Development', 'Production'],
     description:
       'Production anime collectibles commerce platform with a real storefront, checkout, inventory, and admin flow.',
     highlights: [
@@ -48,44 +64,9 @@ export const projects: Project[] = [
       'Inventory reservations backed by PostgreSQL/Supabase',
       'Admin workflows for production-ready order management',
     ],
-    imgUrl: '/store-logo.png',
-    techs: [
-      'Next.js',
-      'Node.js',
-      'Drizzle',
-      'TypeScript',
-      'Tailwind CSS',
-      'PostgreSQL',
-      'Docker',
-      'Stripe',
-      'GitHub Actions (CI/CD)',
-      'TanStack Query',
-    ],
+    video: placeholderVideo,
+    poster: '/store-logo.png',
     liveUrl: 'https://www.popboxstudio.com/',
     repoUrl: 'https://github.com/LouisDev314/popbox-studio-next',
-  },
-  {
-    id: '3',
-    name: 'Last Remains',
-    description:
-      'A 30+ player PvEvP zombie extraction game where survivors scavenge, avoid the undead, outplay rivals, and fight to extract alive.',
-    highlights: [
-      'Managed project planning and production coordination across a cross-functional game team',
-      'Supported development of the PvEvP extraction loop spanning stealth, scavenging, survival, and player conflict',
-      'Helped align design, art, and development work to keep features and milestones moving toward release',
-    ],
-    imgUrl: '/lastremains.webp',
-    techs: [
-      'Project Management',
-      'Production Planning',
-      'Cross-Team Coordination',
-      'Game Development',
-      'PvEvP',
-      'Extraction',
-      'Survival',
-      'Unreal Engine 5',
-    ],
-    liveUrl: 'https://www.mylastday.xyz',
-    repoUrl: 'https://github.com/LouisDev314/my-last-day',
   },
 ];

@@ -198,7 +198,7 @@ export function Globe() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="space-y-2">
           <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-            Building without borders
+            Design without borders
           </h2>
 
           <div className="flex flex-wrap items-center gap-3">

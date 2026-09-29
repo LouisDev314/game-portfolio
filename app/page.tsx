@@ -40,7 +40,7 @@ export default function Home() {
                 <ImagesBadge
                   text="View all →"
                   className="hover:underline"
-                  images={['/paper-bridge-logo.webp', '/store-logo.png', '/my-last-day-logo.webp']}
+                  images={['/lastremains.webp', '/store-logo.png', '/my-last-day-logo.webp']}
                   folderSize={{ width: 24, height: 18 }}
                   teaserImageSize={{ width: 14, height: 10 }}
                   hoverImageSize={{ width: 36, height: 24 }}
@@ -50,7 +50,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="space-y-5">
               {projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
@@ -58,12 +58,12 @@ export default function Home() {
           </section>
         </RevealOnScroll>
 
-        {/* ── Quick Glance ────────────────────────────────────── */}
+        {/* ── About Me ────────────────────────────────────── */}
         <RevealOnScroll>
           <section className="mt-16 mb-12 space-y-8 sm:mt-28">
             {/* Title row */}
             <h2 className="text-3xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-4xl md:text-5xl">
-              Quick Glance
+              About Me
             </h2>
 
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_23rem]">
@@ -75,8 +75,8 @@ export default function Home() {
                 </p>
 
                 <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
-                  Beyond code, I value continuous growth through building and problem-solving—applying each experience to
-                  improve how I design systems, make decisions, and execute in real-world environments.
+                  Beyond code, I value continuous growth through building and problem-solving—applying each experience
+                  to improve how I design systems, make decisions, and execute in real-world environments.
                 </p>
               </div>
 
@@ -97,34 +97,6 @@ export default function Home() {
                 <ContactCard />
               </div>
             </div>
-          </section>
-        </RevealOnScroll>
-
-        {/* ── C) About Me ─────────────────────────────────────── */}
-        <RevealOnScroll>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 mb-12">
-            About Me
-          </h2>
-          <section className="mb-16">
-            <Terminal
-              commands={['whoami', 'focus', 'shipped', 'stack', 'values']}
-              outputs={{
-                0: ['Louis Chan — Full-Stack Developer'],
-                1: ['Production-ready AI systems, e-commerce platforms, backend architecture'],
-                2: [
-                  'Paper Bridge — RAG document intelligence platform',
-                  'PopBox Studio — Stripe-powered e-commerce platform',
-                ],
-                3: ['Next.js · Vercel · Node.js · TypeScript · FastAPI · PostgreSQL · Supabase · Stripe'],
-                4: ['Clean architecture · Performance · Practical product thinking'],
-              }}
-              username="louis@portfolio"
-              className="mt-6 max-w-2xl"
-              typingSpeed={22}
-              delayBetweenCommands={320}
-              initialDelay={120}
-              enableSound={false}
-            />
           </section>
         </RevealOnScroll>
       </main>
