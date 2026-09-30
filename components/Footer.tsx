@@ -70,8 +70,8 @@ export default function Footer({ homeOverlap = false }: { homeOverlap?: boolean 
           <span className="text-base font-semibold text-neutral-900 dark:text-neutral-100">Louis Chan</span>
         </div>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 sm:max-w-lg md:max-w-2xl mt-6 mb-12">
-          Building at the edge of possibility, where ideas become systems and systems shape what’s next. Each line of
-          code moves the world forward —{' '}
+          Designing at the edge of possibility, where ideas become worlds and interaction gives them meaning. Every
+          choice, space, and moment shapes the player’s journey —{' '}
           <span className="whitespace-nowrap italic text-amber-500 dark:text-amber-400">sic itur ad astra</span>.
         </p>
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4 lg:gap-x-12">

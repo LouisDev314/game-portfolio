@@ -9,7 +9,6 @@ import ContactCard from '@/components/ContactCard';
 import { HomeHeroMotion } from '@/components/HomeHeroMotion';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 import { HomeExpandableCards } from '@/components/HomeExpandableCards';
-import { Terminal } from '@/components/ui/terminal';
 
 export default function Home() {
   return (
@@ -32,7 +31,7 @@ export default function Home() {
         {/* ── B) Projects ────────────────────────────────────── */}
         <RevealOnScroll className="mt-32 sm:mt-40 lg:mt-36">
           <section className="mb-16">
-            <div className="flex items-center justify-between mb-5">
+            <div className="flex items-center justify-between mb-5 md:mb-7">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
                 Projects
               </h2>
@@ -68,15 +67,11 @@ export default function Home() {
 
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_23rem]">
               {/* Copy */}
-              <div className="space-y-4">
+              <div>
                 <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
-                  I build production-ready systems by turning complex ideas into clear, reliable products. I focus on
-                  software that feels simple to use, while being thoughtfully designed and robust under the hood.
-                </p>
-
-                <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
-                  Beyond code, I value continuous growth through building and problem-solving—applying each experience
-                  to improve how I design systems, make decisions, and execute in real-world environments.
+                  I’m Louis, a game designer focused on narrative, gameplay, level design, and emotional impact. I use
+                  environmental storytelling to shape player experience, while my software engineering background helps
+                  me prototype ideas and collaborate effectively with technical teams.
                 </p>
               </div>
 

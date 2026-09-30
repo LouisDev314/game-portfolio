@@ -175,7 +175,7 @@ export default function TermsPage() {
             <section className="space-y-3">
               <H2 id="links">6. External Links</H2>
               <P>
-                The Website may contain links to third-party websites (e.g., GitHub, LinkedIn). I am not responsible for
+                The Website may contain links to third-party websites (e.g. LinkedIn). I am not responsible for
                 third-party content, policies, or practices.
               </P>
             </section>

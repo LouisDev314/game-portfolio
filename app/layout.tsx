@@ -15,15 +15,7 @@ export const metadata: Metadata = {
     template: '%s | Louis Chan',
   },
   description: siteConfig.description,
-  keywords: [
-    'Louis Chan',
-    'Full Stack Developer',
-    'Software Engineer',
-    'Next.js',
-    'React',
-    'TypeScript',
-    'AI Engineering',
-  ],
+  keywords: ['Louis Chan', 'Game Designer', 'Game Design', 'Unreal Engine', 'Unity'],
   authors: [{ name: 'Louis Chan' }],
   alternates: {
     canonical: siteConfig.url,

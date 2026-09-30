@@ -1,6 +1,5 @@
 'use client';
 
-import GitHubIcon from '@/assets/icons/github-icon';
 import WhatsAppIcon from '@/assets/icons/whatsapp-icon';
 import TelegramIcon from '@/assets/icons/telegram-icon';
 import WeChatIcon from '@/assets/icons/wechat-icon';
@@ -37,11 +36,6 @@ export default function SocialBtns({ className }: { className?: string }) {
       icon: <Image src="/linkedin-icon.svg" alt="" width={20} height={20} className="size-5" />,
       href: siteConfig.links.linkedIn,
       label: 'LinkedIn',
-    },
-    {
-      icon: <GitHubIcon className="fill-[#181717] dark:fill-white size-5" />,
-      href: siteConfig.links.github,
-      label: 'GitHub',
     },
     {
       icon: <WhatsAppIcon className="fill-[#25D366] size-5" />,

@@ -6,6 +6,7 @@ import { Copy, Check } from 'lucide-react';
 
 export default function CopyBtn({ email }: { email: string }) {
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -18,11 +19,31 @@ export default function CopyBtn({ email }: { email: string }) {
 
   const handleCopy = async () => {
     try {
+      if (!navigator.clipboard) throw new Error('Clipboard API unavailable');
       await navigator.clipboard.writeText(email);
     } catch {
-      return;
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      let copiedWithFallback = false;
+      try {
+        textArea.select();
+        copiedWithFallback = document.execCommand('copy');
+      } catch {
+        copiedWithFallback = false;
+      } finally {
+        textArea.remove();
+      }
+
+      if (!copiedWithFallback) {
+        setCopyError(true);
+        return;
+      }
     }
 
+    setCopyError(false);
     setCopied(true);
 
     // reset after 2s
@@ -34,8 +55,9 @@ export default function CopyBtn({ email }: { email: string }) {
 
   return (
     <motion.button
+      type="button"
       onClick={!copied ? handleCopy : () => {}}
-      aria-label={copied ? 'Copied!' : 'Copy email address'}
+      aria-label={copied ? 'Copied!' : copyError ? 'Copy failed. Try again' : 'Copy email address'}
       whileTap={{ scale: 0.85 }}
       animate={{
         scale: copied ? [1, 1.2, 1] : 1, // bounce
@@ -44,7 +66,9 @@ export default function CopyBtn({ email }: { email: string }) {
       className="relative flex h-7 w-7 items-center justify-center rounded-lg
         text-neutral-400 hover:bg-neutral-200 hover:text-neutral-700
         dark:hover:bg-neutral-800 dark:hover:text-neutral-300
-        transition-colors">
+        cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+      <span className="sr-only" aria-live="polite">{copied ? 'Email address copied' : ''}</span>
+      {copyError && <span className="sr-only" role="alert">Could not copy the email address. Use the email link instead.</span>}
       {/* Glow on success */}
       {copied && (
         <motion.span

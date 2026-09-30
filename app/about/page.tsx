@@ -9,19 +9,11 @@ export default function AboutPage() {
       <main className="mx-auto max-w-6xl px-6 pt-28 md:pb-16">
         <section className="mb-12">
           <PageHeaderTitle title="About Me" />
-          <div className="text-sm md:text-base text-center space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed md:mt-12">
+          <div className="mx-auto max-w-3xl text-center text-base leading-relaxed text-neutral-600 dark:text-neutral-400 md:mt-12 md:text-lg">
             <p>
-              Hi, I’m Louis — a full-stack developer driven to contribute globally by building products that solve
-              real-world problems and create meaningful impact.
-            </p>
-            <p>
-              I work across the stack with React, Next.js, Node.js, and TypeScript, crafting scalable systems, intuitive
-              interfaces, and increasingly, AI-driven workflows.
-            </p>
-            <p>
-              I believe technology is more than code — it’s a way to connect ideas, empower people, and shape the
-              future. I’m driven to turn ideas into production-ready solutions that are thoughtful, fast, and built to
-              last.
+              I’m Louis, a game designer focused on narrative, gameplay, level design, and emotional impact. I use
+              environmental storytelling to shape player experience, while my software engineering background helps me
+              prototype ideas and collaborate effectively with technical teams.
             </p>
           </div>
         </section>

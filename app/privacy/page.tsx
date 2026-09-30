@@ -223,8 +223,8 @@ export default function PrivacyPage() {
             <section className="space-y-3">
               <H2 id="links">9. External Links</H2>
               <P>
-                This Website may link to third-party sites (e.g., GitHub, LinkedIn). I am not responsible for their
-                content or privacy practices. Please review their policies separately.
+                This Website may link to third-party sites (e.g. LinkedIn). I am not responsible for their content or
+                privacy practices. Please review their policies separately.
               </P>
             </section>
 
