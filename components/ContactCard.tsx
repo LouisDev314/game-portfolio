@@ -4,9 +4,8 @@ import ContactForm from '@/components/ContactForm';
 import { siteConfig } from '@/lib/site';
 import { ArrowUpRight, Mail } from 'lucide-react';
 
-const EMAIL = 'louiscch314@gmail.com';
-
 export default function ContactCard({ className }: { className?: string }) {
+  const email = siteConfig.email;
   const content = (
     <div className={className}>
       <div className="grid gap-8 md:grid-cols-2 md:gap-10">
@@ -22,11 +21,11 @@ export default function ContactCard({ className }: { className?: string }) {
             <div className="flex items-center gap-3 rounded-xl border border-neutral-200 bg-neutral-50 px-3 py-2.5 dark:border-neutral-700 dark:bg-neutral-950 sm:px-4">
               <Mail aria-hidden="true" className="size-4 shrink-0 text-neutral-500 dark:text-neutral-400" />
               <a
-                href={`mailto:${EMAIL}`}
+                href={`mailto:${email}`}
                 className="min-w-0 flex-1 break-all text-sm text-neutral-700 underline-offset-4 hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:text-neutral-200">
-                {EMAIL}
+                {email}
               </a>
-              <CopyBtn email={EMAIL} />
+              <CopyBtn email={email} />
             </div>
             <a
               href={siteConfig.links.linkedIn}
@@ -39,7 +38,7 @@ export default function ContactCard({ className }: { className?: string }) {
           </div>
         </div>
 
-        <ContactForm email={EMAIL} />
+        <ContactForm />
       </div>
     </div>
   );
