@@ -4,6 +4,18 @@ export const runtime = 'nodejs';
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function resendErrorResponse(status: number) {
+  if (status === 401 || status === 403 || status === 422) {
+    return Response.json({ error: 'Contact form is temporarily unavailable. Please email me directly.' }, { status: 503 });
+  }
+
+  if (status === 429) {
+    return Response.json({ error: 'Too many messages right now. Please try again later.' }, { status: 429 });
+  }
+
+  return Response.json({ error: 'Message could not be sent. Please try again later.' }, { status: 502 });
+}
+
 export async function POST(request: Request) {
   let input: unknown;
 
@@ -50,11 +62,14 @@ export async function POST(request: Request) {
     });
 
     if (!result.ok) {
-      return Response.json({ error: 'Message could not be sent. Please try again later.' }, { status: 502 });
+      // The response body may contain account information, so log only the status.
+      console.error('Resend rejected a contact message', { status: result.status });
+      return resendErrorResponse(result.status);
     }
 
     return Response.json({ success: true });
-  } catch {
+  } catch (error) {
+    console.error('Contact message delivery failed', error);
     return Response.json({ error: 'Message could not be sent. Please try again later.' }, { status: 502 });
   }
 }

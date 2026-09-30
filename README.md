@@ -54,4 +54,4 @@ pnpm check
 - LinkedIn: [linkedin.com/in/louiscch](https://www.linkedin.com/in/louiscch/)
 - Email: [louiscch314@gmail.com](mailto:louiscch314@gmail.com)
 
-The contact form sends through Resend's email API. Set `RESEND_API_KEY` and `RESEND_FROM_EMAIL` in local `.env` and in Vercel Project Settings → Environment Variables for Production. The sender must be an address on the verified Resend sending domain. Messages go to the portfolio email shown above; visitor addresses are used as Reply-To.
+The contact form sends through Resend's email API. Set `RESEND_API_KEY` and `RESEND_FROM_EMAIL` in local `.env` and in Vercel Project Settings → Environment Variables for Production. `RESEND_FROM_EMAIL` must use a domain verified for sending in the same Resend account as the API key; a Gmail address cannot be used as the sender. Messages go to the portfolio email shown above; visitor addresses are used as Reply-To. After changing Vercel environment variables, redeploy for the new values to take effect.

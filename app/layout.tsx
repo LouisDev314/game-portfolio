@@ -7,6 +7,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { siteConfig } from '@/lib/site';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -55,6 +56,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
             <Analytics />
             <SpeedInsights />
+            <Toaster
+              position="top-center"
+              theme="system"
+              toastOptions={{
+                classNames: {
+                  toast: 'portfolio-toast',
+                  error: 'portfolio-toast-error',
+                  success: 'portfolio-toast-success',
+                  actionButton: 'portfolio-toast-action',
+                },
+              }}
+            />
           </ThemeRippleProvider>
         </ThemeProvider>
       </body>

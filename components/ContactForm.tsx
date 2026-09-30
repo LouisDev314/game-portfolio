@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import { toast } from 'sonner';
+import { siteConfig } from '@/lib/site';
 
 const fieldClassName =
   'w-full rounded-xl border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 outline-none transition-colors hover:border-neutral-400 focus-visible:border-amber-500 focus-visible:ring-2 focus-visible:ring-amber-500/30 user-invalid:border-red-500 user-invalid:focus-visible:ring-red-500/30 dark:border-neutral-700 dark:bg-neutral-950 dark:text-neutral-100 dark:placeholder:text-neutral-500 dark:hover:border-neutral-600';
 
 export default function ContactForm() {
   const [pending, setPending] = useState(false);
-  const [status, setStatus] = useState('');
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -29,7 +30,6 @@ export default function ContactForm() {
     }
 
     setPending(true);
-    setStatus('');
 
     try {
       const response = await fetch('/api/contact', {
@@ -40,14 +40,24 @@ export default function ContactForm() {
       const result: { error?: string } = await response.json();
 
       if (!response.ok) {
-        setStatus(result.error ?? 'Message could not be sent. Please try again later.');
+        toast.error(result.error ?? 'Message could not be sent. Please try again later.', {
+          action: {
+            label: 'Email directly',
+            onClick: () => { window.location.href = `mailto:${siteConfig.email}`; },
+          },
+        });
         return;
       }
 
       form.reset();
-      setStatus('Message sent. Thank you!');
+      toast.success('Message sent. Thank you!');
     } catch {
-      setStatus('Message could not be sent. Please try again later.');
+      toast.error('Message could not be sent. Please try again later.', {
+        action: {
+          label: 'Email directly',
+          onClick: () => { window.location.href = `mailto:${siteConfig.email}`; },
+        },
+      });
     } finally {
       setPending(false);
     }
@@ -102,16 +112,13 @@ export default function ContactForm() {
           className={`${fieldClassName} resize-y`}
         />
       </div>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <div>
         <button
           type="submit"
           disabled={pending}
           className="rounded-xl bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-neutral-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300 dark:focus-visible:ring-offset-neutral-900">
           {pending ? 'Sending…' : 'Send Message'}
         </button>
-        <p role="status" aria-live="polite" className="text-sm text-neutral-600 dark:text-neutral-300">
-          {status}
-        </p>
       </div>
     </form>
   );
