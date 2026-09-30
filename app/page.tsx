@@ -88,7 +88,7 @@ export default function Home() {
             {/* Soft divider + compact CTA */}
             <div className="pt-4">
               <div className="h-px w-full bg-linear-to-r from-transparent via-black/10 to-transparent dark:via-white/10" />
-              <div className="pt-6 mx-auto max-w-4xl">
+              <div className="pt-12 mx-auto max-w-4xl">
                 <ContactCard />
               </div>
             </div>
