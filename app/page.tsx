@@ -13,9 +13,9 @@ import { HomeExpandableCards } from '@/components/HomeExpandableCards';
 export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
-      <main className="mx-auto max-w-7xl px-6 pt-24">
+      <main className="mx-auto max-w-7xl px-6 lg:pt-24">
         {/* ── A) HERO ─────────────────────────────────────────────── */}
-        <section className="mt-24 sm:mt-48 lg:mt-40 flex flex-col items-center text-center">
+        <section className="min-h-svh overflow-x-clip justify-center py-24 lg:min-h-[calc(100svh-6rem)] lg:justify-start lg:pb-0 lg:pt-40 flex flex-col items-center text-center">
           <h1 className="mb-8 text-[clamp(6rem,18vw,16rem)] font-black leading-[0.8] tracking-[-0.07em] wrap-break-word text-neutral-900 dark:text-neutral-100">
             Louis
           </h1>
@@ -29,7 +29,7 @@ export default function Home() {
         </section>
 
         {/* ── B) Projects ────────────────────────────────────── */}
-        <RevealOnScroll className="mt-32 sm:mt-40 lg:mt-36">
+        <RevealOnScroll className="mt-8 sm:mt-10 lg:mt-8">
           <section className="mb-16">
             <div className="flex items-center justify-between mb-5 md:mb-7">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">

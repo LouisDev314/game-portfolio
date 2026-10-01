@@ -9,7 +9,7 @@ interface RevealOnScrollProps {
   threshold?: number;
 }
 
-export default function RevealOnScroll({ children, className = '' }: RevealOnScrollProps) {
+export default function RevealOnScroll({ children, className = '', threshold = 0.1 }: RevealOnScrollProps) {
   const ref = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -35,24 +35,24 @@ export default function RevealOnScroll({ children, className = '' }: RevealOnScr
     const element = ref.current;
     if (!element) return;
 
+    // Stacked mobile cards can make a section much taller than the viewport.
+    // Reveal after a small viewport-sized portion enters, rather than waiting
+    // for a fixed percentage of the entire section to become visible.
+    const visibleThreshold = Math.min(threshold, (window.innerHeight * threshold) / element.offsetHeight);
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-          controls.start('visible');
-          // A revealed section stays visible on the return scroll. In particular,
-          // don't repeatedly composite the entire Projects section and its videos.
-          observer.disconnect();
-        }
+        controls.start(entry.isIntersecting && entry.intersectionRatio >= visibleThreshold ? 'visible' : 'hidden');
       },
       {
-        threshold: [0, 0.1],
+        threshold: [0, visibleThreshold],
         rootMargin: '12% 0px -12% 0px',
       },
     );
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [controls, prefersReducedMotion]);
+  }, [controls, prefersReducedMotion, threshold]);
 
   if (prefersReducedMotion) {
     return <div className={className}>{children}</div>;
@@ -64,8 +64,8 @@ export default function RevealOnScroll({ children, className = '' }: RevealOnScr
       animate={controls}
       initial="hidden"
       variants={{
-        hidden: { opacity: 0, y: 12 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+        hidden: { opacity: 0, y: 12, transition: { duration: 0.5, ease: 'easeOut' } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
       }}
       className={className}>
       {children}

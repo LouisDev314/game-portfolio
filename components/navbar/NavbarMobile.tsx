@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Home, ExternalLink, User, Code, FileText, Handshake, ScrollText } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -31,7 +31,6 @@ const NAV_SECTIONS = [
 export function NavbarMobile() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const ref = useRef<HTMLDivElement>(null);
 
   useScrollLock(open);
 
@@ -76,21 +75,14 @@ export function NavbarMobile() {
         )}
       </AnimatePresence>
 
-      <div
-        className={cn(
-          'fixed top-4 left-1/2 z-[9999] w-1/3 -translate-x-1/2 justify-center lg:hidden',
-          open ? 'w-full' : 'w-[14.25rem]',
-        )}
-        ref={ref}>
+      <div className="pointer-events-none fixed inset-x-4 top-4 z-[9999] flex justify-center lg:hidden">
         <motion.div
-          layout
+          initial={false}
+          animate={{ width: open ? '100%' : '14.25rem', borderRadius: open ? 24 : 32 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className={cn(
-            'overflow-hidden border border-neutral-200 bg-white shadow-lg dark:border-neutral-800 dark:bg-neutral-900',
-            open ? 'mx-4 rounded-3xl' : 'mx-0 rounded-full',
-          )}>
+          className="pointer-events-auto flex max-h-[calc(100svh-2rem)] w-[14.25rem] max-w-full flex-col overflow-hidden border border-neutral-200 bg-white shadow-lg dark:border-neutral-800 dark:bg-neutral-900">
           {/* Pill header — always visible */}
-          <div className="flex h-12 items-center justify-between px-4 py-6">
+          <div className="flex h-12 shrink-0 items-center justify-between px-4">
             <div className="flex gap-3 justify-between items-center w-full">
               <button
                 type="button"
@@ -125,7 +117,8 @@ export function NavbarMobile() {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                className="overflow-hidden">
+                className="min-h-0 overflow-y-auto overscroll-contain"
+                data-lenis-prevent>
                 <div className="px-4 pb-3 pt-2">
                   {NAV_SECTIONS.map((section, si) => (
                     <div key={si}>
@@ -162,7 +155,7 @@ export function NavbarMobile() {
                       rel="noopener noreferrer"
                       aria-label="Connect with Louis Chan on LinkedIn (opens in a new tab)"
                       onClick={() => setOpen(false)}
-                      className="flex w-full items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 transition-colors">
+                      className="flex min-w-0 flex-1 items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200 transition-colors">
                       <div className="flex flex-row items-center">
                         <p>Connect Now</p>
                         <ExternalLink className="size-4 ml-2" />

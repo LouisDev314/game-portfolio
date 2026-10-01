@@ -7,7 +7,6 @@ let originalOverflow = '';
 let originalPaddingRight = '';
 let originalRootOverflow = '';
 let originalRootOverscrollBehavior = '';
-let originalRootTouchAction = '';
 
 export const SCROLL_LOCK_CHANGE_EVENT = 'portfolio:scroll-lock-change';
 
@@ -21,19 +20,19 @@ function lockBodyScroll() {
   if (lockCount === 0) {
     const { body, documentElement } = document;
     const bodyStyle = body.style;
-    const scrollbarWidth = window.innerWidth - documentElement.clientWidth;
+    const originalClientWidth = documentElement.clientWidth;
 
     originalOverflow = bodyStyle.overflow;
     originalPaddingRight = bodyStyle.paddingRight;
     originalRootOverflow = documentElement.style.overflow;
     originalRootOverscrollBehavior = documentElement.style.overscrollBehavior;
-    originalRootTouchAction = documentElement.style.touchAction;
 
     bodyStyle.overflow = 'hidden';
     documentElement.style.overflow = 'hidden';
     documentElement.style.overscrollBehavior = 'none';
-    documentElement.style.touchAction = 'none';
 
+    // Compensate only when hiding the scrollbar actually releases its space.
+    const scrollbarWidth = documentElement.clientWidth - originalClientWidth;
     if (scrollbarWidth > 0) {
       const currentPaddingRight = Number.parseFloat(window.getComputedStyle(body).paddingRight) || 0;
       bodyStyle.paddingRight = `${currentPaddingRight + scrollbarWidth}px`;
@@ -56,7 +55,6 @@ function unlockBodyScroll() {
     bodyStyle.paddingRight = originalPaddingRight;
     document.documentElement.style.overflow = originalRootOverflow;
     document.documentElement.style.overscrollBehavior = originalRootOverscrollBehavior;
-    document.documentElement.style.touchAction = originalRootTouchAction;
     originalOverflow = '';
     originalPaddingRight = '';
     window.dispatchEvent(new Event(SCROLL_LOCK_CHANGE_EVENT));
