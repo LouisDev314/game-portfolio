@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useId, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence, motion, useIsPresent } from 'motion/react';
 import { X } from 'lucide-react';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
@@ -23,6 +23,11 @@ export type CardItem = {
 export interface ExpandableCardsProps {
   cards: CardItem[];
   className?: string;
+}
+
+function PresentContent({ children }: { children: React.ReactNode }) {
+  const present = useIsPresent();
+  return present ? children : null;
 }
 
 export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
@@ -125,7 +130,9 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
                   className="h-full max-h-[90dvh] min-h-0 overflow-y-auto overscroll-contain p-4 touch-pan-y"
                   // extra safety: prevent scroll chaining on desktop trackpads
                   onWheel={(e) => e.stopPropagation()}>
-                  {typeof active.content === 'function' ? active.content() : active.content}
+                  <PresentContent>
+                    {typeof active.content === 'function' ? active.content() : active.content}
+                  </PresentContent>
                 </motion.div>
               </motion.div>
             </div>
