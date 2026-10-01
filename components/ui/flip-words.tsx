@@ -14,6 +14,7 @@ export const FlipWords = ({
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const containerRef = useRef<HTMLSpanElement>(null);
 
   // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
@@ -23,13 +24,32 @@ export const FlipWords = ({
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
-        startAnimation();
-      }, duration);
+    const element = containerRef.current;
+    if (!element || isAnimating) return;
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const update = () => {
+      clearTimeout(timer);
+      if (visible && !document.hidden && !motionPreference.matches) timer = setTimeout(startAnimation, duration);
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      update();
+    });
+    observer.observe(element);
+    document.addEventListener('visibilitychange', update);
+    motionPreference.addEventListener('change', update);
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', update);
+      motionPreference.removeEventListener('change', update);
+    };
   }, [isAnimating, duration, startAnimation]);
 
   return (
+    <span ref={containerRef} className="inline-block">
     <AnimatePresence
       onExitComplete={() => {
         setIsAnimating(false);
@@ -94,5 +114,6 @@ export const FlipWords = ({
         ))}
       </motion.div>
     </AnimatePresence>
+    </span>
   );
 };

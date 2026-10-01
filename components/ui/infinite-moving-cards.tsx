@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import type { CSSProperties } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 
 type PictureItem = {
   src: string; // "/photos/1.jpg" or "https://..."
@@ -23,6 +23,25 @@ export const InfiniteMovingCards = ({
   className?: string;
   imageClassName?: string;
 }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLUListElement>(null);
+  useEffect(() => {
+    const container = containerRef.current;
+    const track = trackRef.current;
+    if (!container || !track) return;
+    let visible = false;
+    const update = () => { track.style.animationPlayState = visible && !document.hidden ? 'running' : 'paused'; };
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      update();
+    });
+    observer.observe(container);
+    document.addEventListener('visibilitychange', update);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', update);
+    };
+  }, []);
   const duration = speed === 'fast' ? '20s' : speed === 'normal' ? '40s' : '80s';
   const scrollerStyle = {
     '--animation-direction': direction === 'left' ? 'forwards' : 'reverse',
@@ -32,17 +51,18 @@ export const InfiniteMovingCards = ({
 
   return (
     <div
+      ref={containerRef}
       style={scrollerStyle}
       className={cn(
         'scroller relative z-20 max-w-7xl overflow-hidden mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className,
       )}>
-      <ul className="flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll">
+      <ul ref={trackRef} style={{ animationPlayState: 'paused' }} className="flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll">
         {scrollingItems.map((item, idx) => {
           const CardInner = (
             <div
               className={cn(
-                'relative overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm',
+                'relative overflow-hidden rounded-2xl border border-white/20 bg-white/5',
                 'dark:border-white/10',
                 // card sizing (tweak as you like)
                 'h-40 w-56 md:h-48 md:w-72',

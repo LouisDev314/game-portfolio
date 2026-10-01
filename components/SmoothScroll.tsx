@@ -5,38 +5,45 @@ import Lenis from 'lenis';
 
 export default function SmoothScroll() {
   useEffect(() => {
-    // Check for prefers-reduced-motion
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (prefersReducedMotion) {
-      return;
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let lenis: Lenis | undefined;
+    let rafId = 0;
+    function configure() {
+      cancelAnimationFrame(rafId);
+      lenis?.destroy();
+      lenis = undefined;
+      if (motionPreference.matches) return;
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+      });
+      if (!document.hidden) rafId = requestAnimationFrame(raf);
     }
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    let rafId = 0;
-    let isActive = true;
-
     function raf(time: number) {
-      if (!isActive) return;
+      if (!lenis || document.hidden) return;
       lenis.raf(time);
       rafId = requestAnimationFrame(raf);
     }
 
-    rafId = requestAnimationFrame(raf);
+    function visibility() {
+      cancelAnimationFrame(rafId);
+      if (!document.hidden && lenis) rafId = requestAnimationFrame(raf);
+    }
+    configure();
+    motionPreference.addEventListener('change', configure);
+    document.addEventListener('visibilitychange', visibility);
 
     return () => {
-      isActive = false;
       cancelAnimationFrame(rafId);
-      lenis.destroy();
+      lenis?.destroy();
+      motionPreference.removeEventListener('change', configure);
+      document.removeEventListener('visibilitychange', visibility);
     };
   }, []);
 

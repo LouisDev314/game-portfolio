@@ -1,0 +1,605 @@
+{
+  "browser": {
+    "unopened": {
+      "audit": {
+        "draws": 0,
+        "contexts": 0,
+        "losses": 0
+      },
+      "memory": {
+        "JSEventListeners": 624,
+        "Nodes": 972,
+        "JSHeapUsedSize": 5741404
+      }
+    },
+    "cycles": [
+      {
+        "readyDraws": 0,
+        "locked": false,
+        "warning": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nPaused\n\nMouse capture unavailable. Use Resume to try again.\n\nResume\nScore 0\n30s\nEsc \u00b7 exit",
+        "escaped": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nPaused\n\nMouse capture unavailable. Use Resume to try again.\n\nResume\nScore 0\n30s\nEsc \u00b7 exit",
+        "pausedDraws": 0,
+        "frozen": true,
+        "closedDraws": 0,
+        "canvasCount": 0,
+        "audit": {
+          "draws": 24,
+          "contexts": 1,
+          "losses": 1
+        },
+        "memory": {
+          "JSEventListeners": 633,
+          "Nodes": 982,
+          "JSHeapUsedSize": 8523280
+        }
+      },
+      {
+        "readyDraws": 0,
+        "closedDraws": 0,
+        "canvasCount": 0,
+        "audit": {
+          "draws": 36,
+          "contexts": 2,
+          "losses": 2
+        },
+        "memory": {
+          "JSEventListeners": 633,
+          "Nodes": 982,
+          "JSHeapUsedSize": 8736540
+        }
+      },
+      {
+        "readyDraws": 0,
+        "closedDraws": 0,
+        "canvasCount": 0,
+        "audit": {
+          "draws": 48,
+          "contexts": 3,
+          "losses": 3
+        },
+        "memory": {
+          "JSEventListeners": 633,
+          "Nodes": 982,
+          "JSHeapUsedSize": 8923432
+        }
+      },
+      {
+        "readyDraws": 0,
+        "closedDraws": 0,
+        "canvasCount": 0,
+        "audit": {
+          "draws": 60,
+          "contexts": 4,
+          "losses": 4
+        },
+        "memory": {
+          "JSEventListeners": 633,
+          "Nodes": 982,
+          "JSHeapUsedSize": 9133020
+        }
+      }
+    ],
+    "media": {
+      "events": [
+        {
+          "i": 1,
+          "type": "loadstart"
+        },
+        {
+          "i": 0,
+          "type": "loadstart"
+        },
+        {
+          "i": 1,
+          "type": "playing"
+        },
+        {
+          "i": 0,
+          "type": "playing"
+        },
+        {
+          "i": 1,
+          "type": "pause"
+        },
+        {
+          "i": 0,
+          "type": "pause"
+        },
+        {
+          "i": 2,
+          "type": "pause"
+        },
+        {
+          "i": 2,
+          "type": "playing"
+        },
+        {
+          "i": 1,
+          "type": "playing"
+        },
+        {
+          "i": 0,
+          "type": "playing"
+        },
+        {
+          "i": 2,
+          "type": "pause"
+        },
+        {
+          "i": 1,
+          "type": "pause"
+        }
+      ],
+      "samples": [
+        {
+          "y": 1000,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": false,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 1800,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 2600,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 2933,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 2600,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 1800,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 1000,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": false,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            },
+            {
+              "paused": false,
+              "src": true
+            }
+          ]
+        },
+        {
+          "y": 0,
+          "opacity": "1",
+          "videos": [
+            {
+              "paused": false,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            },
+            {
+              "paused": true,
+              "src": true
+            }
+          ]
+        }
+      ]
+    },
+    "sizes": [
+      {
+        "viewport": [
+          1920,
+          1080
+        ],
+        "dialog": [
+          1600,
+          929
+        ],
+        "canvas": [
+          1566,
+          783
+        ],
+        "scrollOverflow": false,
+        "text": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nStay moving. Survive 30 seconds.\n\nOne hit ends the run. The floor charges if you stay in one area \u2014 move away to clear it.\n\nPlay\nScore 0\n30s\nEsc \u00b7 exit"
+      },
+      {
+        "viewport": [
+          1024,
+          768
+        ],
+        "dialog": [
+          942,
+          660
+        ],
+        "canvas": [
+          908,
+          514
+        ],
+        "scrollOverflow": false,
+        "text": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nStay moving. Survive 30 seconds.\n\nOne hit ends the run. The floor charges if you stay in one area \u2014 move away to clear it.\n\nPlay\nScore 0\n30s\nEsc \u00b7 exit"
+      },
+      {
+        "viewport": [
+          800,
+          600
+        ],
+        "dialog": [
+          736,
+          516
+        ],
+        "canvas": [
+          702,
+          370
+        ],
+        "scrollOverflow": false,
+        "text": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nStay moving. Survive 30 seconds.\n\nOne hit ends the run. The floor charges if you stay in one area \u2014 move away to clear it.\n\nPlay\nScore 0\n30s\nEsc \u00b7 exit"
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "dialog": [
+          359,
+          480
+        ],
+        "canvas": null,
+        "scrollOverflow": false,
+        "text": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nBest played with mouse + keyboard\n\nScore 0\n30s\nEsc \u00b7 exit"
+      }
+    ],
+    "reduced": {
+      "videos": [
+        true,
+        true,
+        true
+      ],
+      "lenis": false,
+      "carousel": "none"
+    }
+  },
+  "memory_before": {
+    "results": [
+      {
+        "JSEventListeners": 633,
+        "Nodes": 974,
+        "JSHeapUsedSize": 8337352
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 975,
+        "JSHeapUsedSize": 8628368
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 976,
+        "JSHeapUsedSize": 8877820
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 977,
+        "JSHeapUsedSize": 9010904
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 978,
+        "JSHeapUsedSize": 9241292
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 979,
+        "JSHeapUsedSize": 9339244
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 980,
+        "JSHeapUsedSize": 9374788
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 981,
+        "JSHeapUsedSize": 9413356
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 982,
+        "JSHeapUsedSize": 9785576
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 983,
+        "JSHeapUsedSize": 9823556
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 984,
+        "JSHeapUsedSize": 9876736
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 985,
+        "JSHeapUsedSize": 9917756
+      }
+    ],
+    "final": [
+      {
+        "name": "JSEventListeners",
+        "value": 633
+      },
+      {
+        "name": "Nodes",
+        "value": 985
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 9914972
+      }
+    ]
+  },
+  "memory_after": {
+    "results": [
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 8286440
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 8552556
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 8766504
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 8882260
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9059568
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9144784
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9157048
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9171888
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9437396
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9473376
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9503012
+      },
+      {
+        "JSEventListeners": 633,
+        "Nodes": 965,
+        "JSHeapUsedSize": 9520344
+      }
+    ],
+    "final": [
+      {
+        "name": "JSEventListeners",
+        "value": 633
+      },
+      {
+        "name": "Nodes",
+        "value": 965
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 9519320
+      }
+    ]
+  },
+  "native_gameplay": {
+    "camping": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nRun ended.\n0 hits\n\nFloor pulse caught you. Move away when the MOVE warning appears.\n\nPlay Again\nScore 0\n26s\nEsc \u00b7 exit / R \u00b7 restart",
+    "phases": [
+      "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\n\u00d7\nScore 3\n20s Pressure rising\nEsc \u00b7 exit",
+      "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nRun ended.\n5 hits\n\nA shard reached you. Keep moving and watch the flanks.\n\nPlay Again\nScore 5\n13s\nEsc \u00b7 exit / R \u00b7 restart",
+      "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nRun ended.\n5 hits\n\nA shard reached you. Keep moving and watch the flanks.\n\nPlay Again\nScore 5\n13s\nEsc \u00b7 exit / R \u00b7 restart"
+    ],
+    "completion": "Play Orbit\n\nWASD \u00b7 Mouse \u00b7 Hold to fire \u00b7 Tab to pause\n\nRun ended.\n5 hits\n\nA shard reached you. Keep moving and watch the flanks.\n\nPlay Again\nScore 5\n13s\nEsc \u00b7 exit / R \u00b7 restart",
+    "pausedDraws": 0,
+    "closed": true,
+    "audit": {
+      "draws": 19681,
+      "contexts": 10,
+      "losses": 10
+    }
+  },
+  "lazy_loading": {
+    "unopened": [],
+    "mobile": [],
+    "desktop": [
+      "http://localhost:3101/_next/static/chunks/7f2e7b14.927855b693bffd1a.js",
+      "http://localhost:3101/_next/static/chunks/546.4e22318e81e4b2f1.js"
+    ],
+    "dimensions": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "poster": "http://localhost:3101/lastremains.webp"
+      },
+      {
+        "width": 0,
+        "height": 0,
+        "poster": "http://localhost:3101/paper-bridge-logo.webp"
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "poster": "http://localhost:3101/store-logo.png"
+      }
+    ]
+  },
+  "wheel_scroll_after_close": {
+    "samples": [
+      {
+        "y": 1377,
+        "opacity": "1",
+        "playingVideos": 2
+      },
+      {
+        "y": 2781,
+        "opacity": "1",
+        "playingVideos": 0
+      },
+      {
+        "y": 2931,
+        "opacity": "1",
+        "playingVideos": 0
+      },
+      {
+        "y": 2933,
+        "opacity": "1",
+        "playingVideos": 0
+      },
+      {
+        "y": 2933,
+        "opacity": "1",
+        "playingVideos": 0
+      },
+      {
+        "y": 1558,
+        "opacity": "1",
+        "playingVideos": 2
+      },
+      {
+        "y": 153,
+        "opacity": "1",
+        "playingVideos": 1
+      },
+      {
+        "y": 3,
+        "opacity": "1",
+        "playingVideos": 1
+      },
+      {
+        "y": 0,
+        "opacity": "1",
+        "playingVideos": 1
+      },
+      {
+        "y": 0,
+        "opacity": "1",
+        "playingVideos": 1
+      }
+    ],
+    "orbitDraws": 0
+  }
+}

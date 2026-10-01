@@ -16,22 +16,22 @@ import TechStack from '@/components/TechStack';
 
 const cards: CardItem[] = [
   {
-    id: 'play',
-    title: 'Orbit',
-    description: 'Arena FPS',
-    icon: Crosshair,
-    iconColor: 'text-amber-500',
-    modalClassName: 'max-h-[90dvh] w-[min(90%,48rem)]',
-    closeButtonClassName: 'right-7 top-7',
-    content: () => <ArenaGame />,
-  },
-  {
     id: 'skills',
     title: 'Skills',
     description: 'Overview',
     icon: Layers,
     iconColor: 'text-indigo-500',
     content: () => <TechStack />,
+  },
+  {
+    id: 'play',
+    title: 'Mini Game',
+    description: 'Orbit - Arena FPS',
+    icon: Crosshair,
+    iconColor: 'text-amber-500',
+    modalClassName: 'h-[min(70dvh,30rem)] max-h-[90dvh] w-[92vw] max-w-[100rem] sm:h-[86dvh]',
+    closeButtonClassName: 'right-7 top-7',
+    content: () => <ArenaGame />,
   },
 ];
 

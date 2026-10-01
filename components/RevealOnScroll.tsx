@@ -37,14 +37,15 @@ export default function RevealOnScroll({ children, className = '' }: RevealOnScr
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.10) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
           controls.start('visible');
-        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.06) {
-          controls.start('hidden');
+          // A revealed section stays visible on the return scroll. In particular,
+          // don't repeatedly composite the entire Projects section and its videos.
+          observer.disconnect();
         }
       },
       {
-        threshold: [0, 0.06, 0.10],
+        threshold: [0, 0.1],
         rootMargin: '12% 0px -12% 0px',
       },
     );
@@ -66,8 +67,7 @@ export default function RevealOnScroll({ children, className = '' }: RevealOnScr
         hidden: { opacity: 0, y: 12 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
       }}
-      className={className}
-    >
+      className={className}>
       {children}
     </motion.div>
   );
