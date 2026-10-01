@@ -29,7 +29,7 @@ const cards: CardItem[] = [
     description: 'Orbit - Arena FPS',
     icon: Crosshair,
     iconColor: 'text-amber-500',
-    modalClassName: 'h-[min(70dvh,30rem)] max-h-[90dvh] w-[92vw] max-w-[100rem] sm:h-[86dvh]',
+    modalClassName: 'orbit-modal max-h-[90dvh] w-[92vw] max-w-[100rem]',
     closeButtonClassName: 'right-7 top-7',
     content: () => <ArenaGame />,
   },

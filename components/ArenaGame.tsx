@@ -72,96 +72,110 @@ export default function ArenaGame() {
   const playing = state.status === 'playing';
   const ended = state.status === 'over' || state.status === 'complete';
   return (
-    <section className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-amber-400/50 bg-neutral-950 text-neutral-100">
-      <header className="flex shrink-0 items-center justify-between gap-4 px-5 py-3 pr-16 sm:px-6 sm:pr-20">
-        <div>
-          <h2 className="text-lg font-semibold tracking-tight">
-            Play <span className="ml-2 text-xs font-normal text-neutral-400">Orbit</span>
-          </h2>
-          <p className="mt-1 text-xs text-neutral-400">WASD · Mouse · Hold to fire · Tab to pause</p>
+    <>
+      <section className="orbit-mobile-fallback flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-amber-400/50 bg-neutral-950 text-neutral-100">
+        <header className="shrink-0 px-5 py-3 pr-16">
+          <h2 className="text-lg font-semibold tracking-tight">Orbit</h2>
+          <p className="mt-1 max-w-60 text-xs leading-relaxed text-neutral-400">
+            <span className="inline-block">Best played on desktop</span>
+          </p>
+        </header>
+        <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 bg-[#10151b] px-6 py-6 text-center">
+          <p className="text-base font-medium">Mouse + Keyboard required</p>
+          <p className="max-w-64 text-xs leading-relaxed text-neutral-400">Open this on a computer for the full run.</p>
         </div>
-      </header>
-      <div className="relative min-h-0 flex-1 overflow-hidden bg-[#10151b]">
-        <div ref={hostRef} className="absolute inset-0 [&_canvas]:block [&_canvas]:outline-none" />
-        {playing && (
-          <>
-            <div
-              className="pointer-events-none absolute left-1/2 top-5 -translate-x-1/2 text-center text-xs font-semibold tracking-widest text-amber-300"
-              role="status">
-              {state.pressure === 'danger'
-                ? 'MOVE NOW · FLOOR PULSE'
-                : state.pressure === 'warning'
-                  ? 'MOVE · FLOOR CHARGING'
-                  : ''}
-            </div>
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 grid place-items-center text-neutral-200 [[data-feedback=shot]~&]:text-amber-200">
-              <div className="relative size-4">
-                <span className="absolute left-1/2 top-0 h-1 w-px bg-current" />
-                <span className="absolute bottom-0 left-1/2 h-1 w-px bg-current" />
-                <span className="absolute left-0 top-1/2 h-px w-1 bg-current" />
-                <span className="absolute right-0 top-1/2 h-px w-1 bg-current" />
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute bottom-5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-full bg-amber-300 opacity-0 [[data-feedback=shot]~&]:opacity-60 [[data-feedback=hit]~&]:opacity-60 motion-reduce:hidden"
-            />
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 [[data-feedback=hit]~&]:opacity-100">
-              <span className="text-lg text-amber-300">×</span>
-            </div>
-          </>
-        )}
-        {!playing && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-neutral-950/65 px-6 text-center">
-            <p className="text-sm font-medium" role="status">
-              {statusText(state, available, error)}
-              {ended && (
-                <span className="mt-2 block text-3xl font-semibold tabular-nums">
-                  {state.score} <span className="text-sm font-normal text-neutral-400">hits</span>
-                </span>
-              )}
-            </p>
-            {state.message && <p className="max-w-xs text-xs text-neutral-400">{state.message}</p>}
-            {state.status === 'ready' && available && (
-              <p className="max-w-sm text-xs text-neutral-400">
-                One hit ends the run. The floor charges if you stay in one area — move away to clear it.
-              </p>
-            )}
-            {available && state.status !== 'error' && (
-              <button
-                ref={actionRef}
-                data-autofocus
-                type="button"
-                onClick={() => engineRef.current?.start()}
-                className="rounded-full bg-amber-400 px-7 py-2.5 text-sm font-semibold text-neutral-950 hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300">
-                {ended ? 'Play Again' : state.status === 'paused' ? 'Resume' : 'Play'}
-              </button>
-            )}
+      </section>
+      <section className="orbit-desktop-game flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-amber-400/50 bg-neutral-950 text-neutral-100">
+        <header className="flex shrink-0 items-center justify-between gap-4 px-5 py-3 pr-16 sm:px-6 sm:pr-20">
+          <div>
+            <h2 className="text-lg font-semibold tracking-tight">
+              Play <span className="ml-2 text-xs font-normal text-neutral-400">Orbit</span>
+            </h2>
+            <p className="mt-1 text-xs text-neutral-400">WASD · Mouse · Hold to fire · Tab to pause</p>
           </div>
-        )}
-      </div>
-      <footer className="flex shrink-0 flex-wrap items-center justify-between gap-3 px-5 py-3 text-xs text-neutral-400 sm:px-6">
-        <span>
-          Score <span className="ml-2 font-semibold tabular-nums text-neutral-100">{state.score}</span>
-        </span>
-        <span className="tabular-nums">
-          {state.remaining}s{' '}
-          <span className="ml-2 text-amber-200">
-            {playing
-              ? state.remaining > 20
-                ? 'Settle in'
-                : state.remaining > 10
-                  ? 'Pressure rising'
-                  : 'Final push'
-              : ''}
+        </header>
+        <div className="relative min-h-0 flex-1 overflow-hidden bg-[#10151b]">
+          <div ref={hostRef} className="absolute inset-0 [&_canvas]:block [&_canvas]:outline-none" />
+          {playing && (
+            <>
+              <div
+                className="pointer-events-none absolute left-1/2 top-5 -translate-x-1/2 text-center text-xs font-semibold tracking-widest text-amber-300"
+                role="status">
+                {state.pressure === 'danger'
+                  ? 'MOVE NOW · FLOOR PULSE'
+                  : state.pressure === 'warning'
+                    ? 'MOVE · FLOOR CHARGING'
+                    : ''}
+              </div>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 grid place-items-center text-neutral-200 [[data-feedback=shot]~&]:text-amber-200">
+                <div className="relative size-4">
+                  <span className="absolute left-1/2 top-0 h-1 w-px bg-current" />
+                  <span className="absolute bottom-0 left-1/2 h-1 w-px bg-current" />
+                  <span className="absolute left-0 top-1/2 h-px w-1 bg-current" />
+                  <span className="absolute right-0 top-1/2 h-px w-1 bg-current" />
+                </div>
+              </div>
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute bottom-5 left-1/2 h-1 w-8 -translate-x-1/2 rounded-full bg-amber-300 opacity-0 [[data-feedback=shot]~&]:opacity-60 [[data-feedback=hit]~&]:opacity-60 motion-reduce:hidden"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 grid place-items-center opacity-0 [[data-feedback=hit]~&]:opacity-100">
+                <span className="text-lg text-amber-300">×</span>
+              </div>
+            </>
+          )}
+          {!playing && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-neutral-950/65 px-6 text-center">
+              <p className="text-sm font-medium" role="status">
+                {statusText(state, available, error)}
+                {ended && (
+                  <span className="mt-2 block text-3xl font-semibold tabular-nums">
+                    {state.score} <span className="text-sm font-normal text-neutral-400">hits</span>
+                  </span>
+                )}
+              </p>
+              {state.message && <p className="max-w-xs text-xs text-neutral-400">{state.message}</p>}
+              {state.status === 'ready' && available && (
+                <p className="max-w-sm text-xs text-neutral-400">
+                  One hit ends the run. The floor charges if you stay in one area — move away to clear it.
+                </p>
+              )}
+              {available && state.status !== 'error' && (
+                <button
+                  ref={actionRef}
+                  data-autofocus
+                  type="button"
+                  onClick={() => engineRef.current?.start()}
+                  className="rounded-full bg-amber-400 px-7 py-2.5 text-sm font-semibold text-neutral-950 hover:bg-amber-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300">
+                  {ended ? 'Play Again' : state.status === 'paused' ? 'Resume' : 'Play'}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+        <footer className="flex shrink-0 flex-wrap items-center justify-between gap-3 px-5 py-3 text-xs text-neutral-400 sm:px-6">
+          <span>
+            Score <span className="ml-2 font-semibold tabular-nums text-neutral-100">{state.score}</span>
           </span>
-        </span>
-        <span>Esc · exit{ended ? ' / R · restart' : ''}</span>
-      </footer>
-    </section>
+          <span className="tabular-nums">
+            {state.remaining}s{' '}
+            <span className="ml-2 text-amber-200">
+              {playing
+                ? state.remaining > 20
+                  ? 'Settle in'
+                  : state.remaining > 10
+                    ? 'Pressure rising'
+                    : 'Final push'
+                : ''}
+            </span>
+          </span>
+          <span>Esc · exit{ended ? ' / R · restart' : ''}</span>
+        </footer>
+      </section>
+    </>
   );
 }

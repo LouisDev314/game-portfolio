@@ -35,6 +35,18 @@ export function NavbarMobile() {
 
   useScrollLock(open);
 
+  // Release the scroll lock when the mobile navigation is hidden on desktop.
+  useEffect(() => {
+    if (!open) return;
+    const desktop = window.matchMedia('(min-width: 1024px)');
+    function closeOnDesktop() {
+      if (desktop.matches) setOpen(false);
+    }
+    closeOnDesktop();
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => desktop.removeEventListener('change', closeOnDesktop);
+  }, [open]);
+
   // Close on ESC
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {

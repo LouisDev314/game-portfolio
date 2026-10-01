@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Lenis from 'lenis';
+import { isScrollLocked, SCROLL_LOCK_CHANGE_EVENT } from '@/hooks/use-scroll-lock';
 
 export default function SmoothScroll() {
   useEffect(() => {
@@ -22,7 +23,13 @@ export default function SmoothScroll() {
         wheelMultiplier: 1,
         touchMultiplier: 2,
       });
+      syncScrollLock();
       if (!document.hidden) rafId = requestAnimationFrame(raf);
+    }
+
+    function syncScrollLock() {
+      if (isScrollLocked()) lenis?.stop();
+      else lenis?.start();
     }
 
     function raf(time: number) {
@@ -38,12 +45,14 @@ export default function SmoothScroll() {
     configure();
     motionPreference.addEventListener('change', configure);
     document.addEventListener('visibilitychange', visibility);
+    window.addEventListener(SCROLL_LOCK_CHANGE_EVENT, syncScrollLock);
 
     return () => {
       cancelAnimationFrame(rafId);
       lenis?.destroy();
       motionPreference.removeEventListener('change', configure);
       document.removeEventListener('visibilitychange', visibility);
+      window.removeEventListener(SCROLL_LOCK_CHANGE_EVENT, syncScrollLock);
     };
   }, []);
 

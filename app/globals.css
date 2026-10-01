@@ -22,6 +22,29 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Match the arena's input capability check, including landscape touch phones. */
+.orbit-modal {
+  height: min(22rem, 90dvh);
+}
+
+.orbit-desktop-game {
+  display: none;
+}
+
+@media (min-width: 640px) and (hover: hover) and (pointer: fine) {
+  .orbit-modal {
+    height: 86dvh;
+  }
+
+  .orbit-mobile-fallback {
+    display: none;
+  }
+
+  .orbit-desktop-game {
+    display: flex;
+  }
+}
+
 @theme inline {
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',

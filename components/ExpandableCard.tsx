@@ -6,6 +6,7 @@ import { X } from 'lucide-react';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
 import { Portal } from '@/components/Portal';
+import { useScrollLock } from '@/hooks/use-scroll-lock';
 
 type IconProps = { className?: string };
 
@@ -30,6 +31,18 @@ function PresentContent({ children }: { children: React.ReactNode }) {
   return present ? children : null;
 }
 
+function ScrollLockedOverlay({ children }: { children: React.ReactNode }) {
+  // AnimatePresence keeps this mounted until the shared layout exit finishes.
+  // Unlocking earlier lets the moving dialog expand the mobile scroll viewport.
+  useScrollLock(true);
+
+  return (
+    <motion.div layoutRoot className="fixed inset-0 z-[10000] grid place-items-center overflow-hidden">
+      {children}
+    </motion.div>
+  );
+}
+
 export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
   const [active, setActive] = useState<CardItem | null>(null);
   const ref = useRef<HTMLDivElement>(null);
@@ -38,10 +51,8 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
 
   useEffect(() => {
     if (!active) return;
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
     const focusTarget = ref.current?.querySelector<HTMLElement>('[data-autofocus]') ?? ref.current;
-    focusTarget?.focus();
+    focusTarget?.focus({ preventScroll: true });
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
@@ -72,8 +83,7 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
     window.addEventListener('keydown', onKeyDown);
     return () => {
       window.removeEventListener('keydown', onKeyDown);
-      document.body.style.overflow = originalOverflow;
-      triggerRef.current?.focus();
+      triggerRef.current?.focus({ preventScroll: true });
     };
   }, [active]);
 
@@ -84,7 +94,7 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
       <Portal>
         <AnimatePresence>
           {active ? (
-            <div className="fixed inset-0 z-[10000] grid place-items-center overflow-hidden">
+            <ScrollLockedOverlay>
               {/* Backdrop */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -135,7 +145,7 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
                   </PresentContent>
                 </motion.div>
               </motion.div>
-            </div>
+            </ScrollLockedOverlay>
           ) : null}
         </AnimatePresence>
       </Portal>
