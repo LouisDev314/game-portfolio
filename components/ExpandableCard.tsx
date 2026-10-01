@@ -184,7 +184,7 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${card.description}-${cardId}`}
-                    className="text-sm text-neutral-600 dark:text-neutral-400 text-center md:text-left">
+                    className="text-sm text-neutral-600 dark:text-neutral-400 text-center">
                     {card.description}
                   </motion.p>
                 </div>

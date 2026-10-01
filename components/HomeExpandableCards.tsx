@@ -17,8 +17,8 @@ import TechStack from '@/components/TechStack';
 const cards: CardItem[] = [
   {
     id: 'play',
-    title: 'Play',
-    description: '30 seconds in orbit',
+    title: 'Orbit',
+    description: 'Arena FPS',
     icon: Crosshair,
     iconColor: 'text-amber-500',
     modalClassName: 'max-h-[90dvh] w-[min(90%,48rem)]',
