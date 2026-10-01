@@ -20,8 +20,11 @@ export default function AboutPage() {
 
         <section>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
-            Skills
+            Skills & Toolkit
           </h2>
+          <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            I design and prototype player experiences through gameplay, levels, systems, and storytelling.
+          </p>
           <TechStackChips />
           <WorkTimeline />
         </section>

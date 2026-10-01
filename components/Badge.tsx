@@ -8,12 +8,14 @@ export default function Badge({
   titleClassName,
   fillClassName,
   hasAnim = true,
+  featured = false,
 }: {
   title: string;
   icon?: ReactNode;
   titleClassName?: string;
   fillClassName?: string;
   hasAnim?: boolean;
+  featured?: boolean;
 }) {
   if (!hasAnim)
     return (
@@ -30,6 +32,12 @@ export default function Badge({
     );
 
   return (
-    <AnimatedBadge title={title} icon={icon} titleClassName={titleClassName} fillClassName={fillClassName} />
+    <AnimatedBadge
+      title={title}
+      icon={icon}
+      titleClassName={titleClassName}
+      fillClassName={fillClassName}
+      featured={featured}
+    />
   );
 }
