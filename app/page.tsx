@@ -65,7 +65,7 @@ export default function Home() {
               About Me
             </h2>
 
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_23rem]">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_25rem] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_26rem]">
               {/* Copy */}
               <div>
                 <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
@@ -75,7 +75,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="w-full max-w-sm justify-self-center lg:max-w-none">
+              <div className="w-full max-w-md justify-self-center lg:max-w-none">
                 <HomeExpandableCards />
               </div>
             </div>

@@ -1,18 +1,20 @@
 'use client';
 
-import { Layers, MapPin } from 'lucide-react';
+import { Layers, Crosshair } from 'lucide-react';
 import { ExpandableCard, type CardItem } from '@/components/ExpandableCard';
-import { Globe } from '@/components/Globe';
+import { ExtractionGame } from '@/components/ExtractionGame';
 import TechStack from '@/components/TechStack';
 
 const cards: CardItem[] = [
   {
-    id: 'canada',
-    title: 'Location',
-    description: 'Based in Canada',
-    icon: MapPin,
-    iconColor: 'text-red-600',
-    content: () => <Globe />,
+    id: 'extraction',
+    title: 'Extraction',
+    description: 'Play a short run',
+    icon: Crosshair,
+    iconColor: 'text-amber-500',
+    modalClassName: 'max-h-[90dvh] w-[min(90%,48rem)]',
+    closeButtonClassName: 'right-16 sm:right-20',
+    content: () => <ExtractionGame />,
   },
   {
     id: 'skills',
@@ -25,5 +27,5 @@ const cards: CardItem[] = [
 ];
 
 export function HomeExpandableCards() {
-  return <ExpandableCard cards={cards} className="lg:justify-between" />;
+  return <ExpandableCard cards={cards} className="flex-wrap justify-center gap-8 sm:gap-12 lg:justify-between" />;
 }

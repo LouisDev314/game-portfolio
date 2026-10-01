@@ -2,8 +2,10 @@
 
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { X } from 'lucide-react';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
+import { Portal } from '@/components/Portal';
 
 type IconProps = { className?: string };
 
@@ -13,6 +15,8 @@ export type CardItem = {
   description: string;
   icon: React.ComponentType<IconProps>;
   iconColor?: string;
+  modalClassName?: string;
+  closeButtonClassName?: string;
   content: React.ReactNode | (() => React.ReactNode);
 };
 
@@ -22,29 +26,49 @@ export interface ExpandableCardsProps {
 }
 
 export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
-  const [active, setActive] = useState<CardItem | boolean | null>(null);
+  const [active, setActive] = useState<CardItem | null>(null);
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement | null>(null);
   const baseId = useId();
 
   useEffect(() => {
+    if (!active) return;
     const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const focusTarget = ref.current?.querySelector<HTMLElement>('[data-autofocus]') ?? ref.current;
+    focusTarget?.focus();
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
-        setActive(false);
+        event.preventDefault();
+        setActive(null);
       }
-    }
-
-    if (active && typeof active === 'object') {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = originalOverflow;
+      if (event.key === 'Tab' && ref.current) {
+        const focusable = Array.from(
+          ref.current.querySelectorAll<HTMLElement>('button:not([disabled]), [href], [tabindex]:not([tabindex="-1"])'),
+        );
+        if (!focusable.length) {
+          event.preventDefault();
+          ref.current.focus();
+          return;
+        }
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || document.activeElement === ref.current)) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     }
 
     window.addEventListener('keydown', onKeyDown);
     return () => {
       window.removeEventListener('keydown', onKeyDown);
       document.body.style.overflow = originalOverflow;
+      triggerRef.current?.focus();
     };
   }, [active]);
 
@@ -52,59 +76,83 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
 
   return (
     <>
-      <AnimatePresence>
-        {active && typeof active === 'object' ? (
-          <div className="fixed inset-0 z-[100] grid place-items-center overflow-hidden">
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/5 dark:bg-black/20"
-              // prevents wheel/touch from reaching the page behind
-              onWheel={(e) => e.stopPropagation()}
-              onTouchMove={(e) => e.stopPropagation()}
-            />
-
-            {/* Modal */}
-            <motion.div
-              layoutId={`card-${active.title}-${active.id || baseId}`}
-              ref={ref as React.RefObject<HTMLDivElement>}
-              className="h-3/4 w-[90%] overflow-hidden rounded-3xl bg-white z-10 dark:bg-neutral-900"
-              // trap scroll so it doesn't chain to body
-              onWheel={(e) => e.stopPropagation()}
-              onTouchMove={(e) => e.stopPropagation()}>
-              {/* Scrollable content region */}
+      <Portal>
+        <AnimatePresence>
+          {active ? (
+            <div className="fixed inset-0 z-[10000] grid place-items-center overflow-hidden">
+              {/* Backdrop */}
               <motion.div
-                layout
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="h-full min-h-0 px-4 py-4 overflow-y-auto overscroll-contain touch-pan-y"
-                // extra safety: prevent scroll chaining on desktop trackpads
-                onWheel={(e) => e.stopPropagation()}>
-                {typeof active.content === 'function' ? active.content() : active.content}
+                className="absolute inset-0 bg-black/5 dark:bg-black/20"
+                // prevents wheel/touch from reaching the page behind
+                onWheel={(e) => e.stopPropagation()}
+                onTouchMove={(e) => e.stopPropagation()}
+              />
+
+              {/* Modal */}
+              <motion.div
+                layoutId={`card-${active.title}-${active.id || baseId}`}
+                ref={ref as React.RefObject<HTMLDivElement>}
+                role="dialog"
+                aria-modal="true"
+                aria-label={active.title}
+                tabIndex={-1}
+                className={cn(
+                  'relative z-10 overflow-hidden rounded-3xl bg-white dark:bg-neutral-900',
+                  active.modalClassName ?? 'h-3/4 w-[90%]',
+                )}
+                // trap scroll so it doesn't chain to body
+                onWheel={(e) => e.stopPropagation()}
+                onTouchMove={(e) => e.stopPropagation()}>
+                <button
+                  type="button"
+                  aria-label={`Close ${active.title}`}
+                  onClick={() => setActive(null)}
+                  className={cn(
+                    'absolute right-8 top-8 z-20 flex size-10 items-center justify-center rounded-full border border-neutral-200 bg-white/90 text-neutral-700 shadow-sm hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
+                    active.closeButtonClassName,
+                  )}>
+                  <X aria-hidden="true" className="size-5" />
+                </button>
+                {/* Scrollable content region */}
+                <motion.div
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="h-full max-h-[90dvh] min-h-0 overflow-y-auto overscroll-contain p-4 touch-pan-y"
+                  // extra safety: prevent scroll chaining on desktop trackpads
+                  onWheel={(e) => e.stopPropagation()}>
+                  {typeof active.content === 'function' ? active.content() : active.content}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </div>
-        ) : null}
-      </AnimatePresence>
-      <ul className={cn('w-full mx-auto flex justify-around gap-4', className)}>
+            </div>
+          ) : null}
+        </AnimatePresence>
+      </Portal>
+      <div className={cn('w-full mx-auto flex justify-around gap-4', className)}>
         {cards.map((card) => {
           const cardId = card.id || baseId;
           const Icon = card.icon;
           return (
-            <motion.div
+            <motion.button
+              type="button"
               layoutId={`card-${card.title}-${cardId}`}
               key={`card-${card.title}-${cardId}`}
-              onClick={() => setActive(card)}
+              onClick={(event) => {
+                triggerRef.current = event.currentTarget;
+                setActive(card);
+              }}
+              aria-label={`Open ${card.title}`}
               className="
-                p-4 size-38
+                shrink-0 p-4 size-38
                 flex flex-col justify-center items-center
                 rounded-3xl relative z-0
                 border-[1.5] border-amber-400/80 dark:border-amber-400/40
 
-                transition-all duration-200 ease-out
+                transition-all duration-200 ease-out motion-reduce:transition-none
                 cursor-pointer
 
                 hover:-translate-y-1
@@ -134,10 +182,10 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
                   </motion.p>
                 </div>
               </div>
-            </motion.div>
+            </motion.button>
           );
         })}
-      </ul>
+      </div>
     </>
   );
 }

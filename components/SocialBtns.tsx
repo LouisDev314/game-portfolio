@@ -9,6 +9,11 @@ export default function SocialBtns({ className }: { className?: string }) {
       href: siteConfig.links.linkedIn,
       label: 'LinkedIn',
     },
+    {
+      icon: <Image src="/itchio.png" alt="" width={20} height={20} className="size-5 object-contain" />,
+      href: siteConfig.links.itchIo,
+      label: 'itch.io',
+    },
   ];
 
   return (

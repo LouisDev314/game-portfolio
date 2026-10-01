@@ -7,5 +7,6 @@ export const siteConfig = {
   email: 'louiscch314@gmail.com',
   links: {
     linkedIn: 'https://www.linkedin.com/in/louiscch/',
+    itchIo: 'https://louischan.itch.io/',
   },
 } as const;

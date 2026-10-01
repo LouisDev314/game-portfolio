@@ -143,7 +143,7 @@ export function NavbarMobile() {
                   ))}
 
                   {/* Spacer + CTA */}
-                  <div className="space-y-1.5 mt-2 mb-3">
+                  <div className="mt-2 mb-3 flex items-center gap-2">
                     <a
                       href={siteConfig.links.linkedIn}
                       target="_blank"
@@ -155,6 +155,15 @@ export function NavbarMobile() {
                         <p>Connect Now</p>
                         <ExternalLink className="size-4 ml-2" />
                       </div>
+                    </a>
+                    <a
+                      href={siteConfig.links.itchIo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Louis Chan on itch.io (opens in a new tab)"
+                      onClick={() => setOpen(false)}
+                      className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-neutral-200 bg-white transition-colors hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
+                      <Image src="/itchio.png" alt="" width={20} height={20} className="size-5 object-contain" />
                     </a>
                   </div>
                 </div>
