@@ -21,12 +21,11 @@ export const projects: Project[] = [
     name: 'Last Remains',
     slug: 'last-remains',
     tags: ['Project Management', 'Production'],
-    description:
-      'A 30+ player PvEvP zombie extraction game where survivors scavenge resources, evade the undead, outplay rival players, and fight to extract alive.',
+    description: 'A 30+ player PvEvP zombie extraction game about scavenging, surviving, and escaping.',
     highlights: [
-      'Managed production planning and milestone tracking',
-      'Coordinated work across design, art, and development',
-      'Helped align team priorities around the core extraction experience',
+      'Production planning and milestone tracking',
+      'Provided design feedback from playtests',
+      'Coordinated across art, design, development, and marketing',
     ],
     video: placeholderVideo,
     poster: '/lastremains.webp',

@@ -17,11 +17,11 @@ export default function ProjectsPage() {
           <PageHeaderTitle title="Projects" />
 
           <div className="text-center text-neutral-600 dark:text-neutral-400 text-lg">
-            Building what matters — not just what works
+            Designing experiences that stay with players
           </div>
 
           <div className="text-center text-neutral-500 dark:text-neutral-500 text-sm mt-2">
-            where ideas become products, and technology creates impact
+            where mechanics, spaces, and stories shape how play feels
           </div>
         </section>
 
