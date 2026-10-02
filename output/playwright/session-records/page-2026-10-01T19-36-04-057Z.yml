@@ -1,0 +1,227 @@
+- generic [active] [ref=f8e1]:
+  - button "Toggle navigation menu" [ref=f8e5]:
+    - img "Louis Chan portfolio logo" [ref=f8e7]
+    - generic [ref=f8e8]: Louis Chan
+  - generic [ref=f8e11]:
+    - main [ref=f8e12]:
+      - article [ref=f8e13]:
+        - link "← All articles" [ref=f8e14] [cursor=pointer]:
+          - /url: /blogs?preview=drafts
+        - complementary [ref=f8e15]: Draft for manual editorial review · Local preview only · Gameplay captures pending
+        - generic [ref=f8e16]:
+          - paragraph [ref=f8e17]: Game Analysis · 2023 Remake
+          - heading "Buying Time in Resident Evil 4 Remake" [level=1] [ref=f8e18]
+          - paragraph [ref=f8e19]: How the 2023 remake turns positioning, crowd control, and resource spending into temporary breathing room—and keeps that room from becoming permanent safety.
+          - paragraph [ref=f8e20]: By Louis Chan
+        - figure [ref=f8e21]:
+          - img "Leon on a misty woodland path in Resident Evil 4 Remake." [ref=f8e22]
+          - link "Official promotional screenshot · © CAPCOM CO., LTD. · via Steam" [ref=f8e24] [cursor=pointer]:
+            - /url: https://store.steampowered.com/app/2050650/Resident_Evil_4/
+        - generic [ref=f8e25]:
+          - region "Play context" [ref=f8e26]:
+            - generic [ref=f8e27]:
+              - generic [ref=f8e28]:
+                - term [ref=f8e29]: Game
+                - definition [ref=f8e30]: Resident Evil 4
+              - generic [ref=f8e31]:
+                - term [ref=f8e32]: Version
+                - definition [ref=f8e33]: 2023 Remake
+              - generic [ref=f8e34]:
+                - term [ref=f8e35]: Developer / publisher
+                - definition [ref=f8e36]: Capcom / Capcom
+              - generic [ref=f8e37]:
+                - term [ref=f8e38]: Platform played
+                - definition [ref=f8e39]: PC / Steam
+              - generic [ref=f8e40]:
+                - term [ref=f8e41]: Playtime
+                - definition [ref=f8e42]: 15.2 hours
+            - paragraph [ref=f8e43]: Playtime shown in my supplied Steam Library capture. It records time played, not campaign completion or difficulty.
+            - group [ref=f8e44]:
+              - generic "Steam playtime context" [ref=f8e45] [cursor=pointer]
+          - navigation "Article contents" [ref=f8e46]:
+            - paragraph [ref=f8e47]: In this analysis
+            - list [ref=f8e48]:
+              - listitem [ref=f8e49]:
+                - link "01 / A good position has an expiry date" [ref=f8e50] [cursor=pointer]:
+                  - /url: "#positions"
+              - listitem [ref=f8e51]:
+                - link "02 / Combat changes the shape of the crowd" [ref=f8e52] [cursor=pointer]:
+                  - /url: "#crowd-control"
+              - listitem [ref=f8e53]:
+                - link "03 / The knife puts a price on recovery" [ref=f8e54] [cursor=pointer]:
+                  - /url: "#knife"
+              - listitem [ref=f8e55]:
+                - link "04 / Relief turns survival into preparation" [ref=f8e56] [cursor=pointer]:
+                  - /url: "#preparation"
+              - listitem [ref=f8e57]:
+                - link "Design takeaways" [ref=f8e58] [cursor=pointer]:
+                  - /url: "#design-takeaways"
+          - generic [ref=f8e59]:
+            - paragraph [ref=f8e60]: In Resident Evil 4 Remake, a good combat decision often buys a few seconds rather than lasting safety. A doorway reduces the directions I need to watch. A kick interrupts a cluster of attackers. A parry prevents an immediate hit while wearing down the tool that made it possible. The useful question is not only “How much damage can I deal?” but “What will let me act next?”
+            - paragraph [ref=f8e61]: My argument is that the remake sustains pressure by making control temporary. Its spaces offer positions worth taking, its combat lets the player interrupt danger, and its economy puts a price on those interruptions. Looking at the village opening and the Chapter 5 house defense shows how these systems reinforce one another. This analysis concerns the 2023 main campaign on PC; it does not treat the 2005 game, VR Mode, or bonus modes as interchangeable evidence.
+            - generic [ref=f8e62]:
+              - heading "01 / A good position has an expiry date" [level=2] [ref=f8e63]
+              - paragraph [ref=f8e64]: "The opening village encounter is useful because it offers several plausible answers to the same problem. The square gives Leon room to move, but approaching Ganados can spread the threat across his field of view. Moving into a house reduces that exposure. It also reduces escape space. Neither choice is simply the correct way to play: each changes which danger is easiest to manage."
+              - paragraph [ref=f8e65]: The house containing the W-870 shotgun makes that tradeoff concrete. Leon can barricade a downstairs window, head upstairs for the weapon, and leave through a window onto the roof. Enemies can approach through the building and its windows. The house therefore acts as a sequence of tactical positions rather than a single refuge. Taking the shotgun improves the player’s immediate options, but holding the surrounding space still demands attention.
+              - paragraph [ref=f8e66]: A doorway is valuable because it compresses the problem. Instead of tracking several approaches at once, the player can concentrate attacks along a narrower route. The cost is what happens when that route fills or another entrance becomes active. Repositioning then becomes an extension of the plan, rather than an admission that shooting failed. The roof and windows matter because they allow the player to turn a compromised position into another decision.
+              - paragraph [ref=f8e67]: This is a more precise explanation than saying cramped spaces automatically create horror. An open square can be threatening because the player cannot watch every approach. A confined room can briefly feel manageable because it makes enemies easier to track. Pressure comes from the relationship between visibility, access, and escape—not from room size alone. The same geometry can support confidence or panic as enemy positions change.
+              - paragraph [ref=f8e68]: The over-the-shoulder camera strengthens this problem. Looking at one threat leaves other approaches outside the frame. A usable arena needs enough structure for the player to form a plan without giving a complete, effortless picture of the fight. Windows, stairs, and doorways provide recognizable route choices, but the player must still check what those routes contain.
+              - paragraph [ref=f8e69]: There is a tradeoff here. On a first visit, a player may not recognize an exit quickly enough to use it. An arena full of options only supports agency if those options can be understood under pressure. For a designer, the useful test is whether a player who loses a position can identify a next move. Temporary safety works best when its failure produces a readable transition, not an opaque punishment.
+              - complementary [ref=f8e70]:
+                - strong [ref=f8e71]: Design principle
+                - text: Build positions with a clear benefit, a legible failure condition, and an accessible next move. A useful refuge can change the fight without ending it.
+              - figure "The village square offers movement space while spreading attention across multiple approaches." [ref=f8e72]:
+                - generic [ref=f8e73]:
+                  - generic [ref=f8e74]: Screenshot needed
+                  - paragraph [ref=f8e75]: Chapter 1, opening village fight. Frame Leon near an edge of the square, two separated enemy approaches, and the shotgun house or another visible escape route. Keep the HUD.
+                  - code [ref=f8e76]: village-pressure.webp
+            - generic [ref=f8e78]:
+              - heading "02 / Combat changes the shape of the crowd" [level=2] [ref=f8e79]
+              - paragraph [ref=f8e80]: "Damage is only one output of an attack. In a crowded encounter, an interruption can be valuable because it changes who can reach Leon during the next few seconds. The remake’s stagger-to-melee sequence expresses this clearly: create an opening with gunfire, move close enough to use the contextual attack, then decide what to do with the space it creates."
+              - paragraph [ref=f8e81]: A kick can catch nearby enemies as well as the staggered target. That makes enemy grouping tactically relevant. A target surrounded by other attackers may offer more crowd-control value than an isolated target, but approaching that group also exposes Leon to danger. The player is deciding whether to convert a ranged opportunity into a close-range payoff. The melee prompt identifies an available action; it does not guarantee that taking it is the best decision.
+              - paragraph [ref=f8e82]: "The remake also permits movement while aiming, so the old game’s requirement to stop in order to shoot cannot explain its combat rhythm. Here the commitment is more flexible: the player can adjust position while aiming, but still needs to manage distance and attention. Capcom’s manual notes that a focused reticle improves stagger and critical-hit chances. Waiting for a better shot therefore competes with the need to interrupt an approaching threat immediately."
+              - paragraph [ref=f8e83]: That distinction changes how I read weapon efficiency. Spending fewer rounds is useful, but waiting too long for an efficient shot may surrender the position that made the shot possible. Conversely, using a shotgun shell to disrupt a close group can be worthwhile even when it is not the cheapest way to kill one enemy. The value of ammunition depends partly on what the player can do after firing it.
+              - paragraph [ref=f8e84]: The Chapter 5 house defense with Luis compresses these choices. Windows are entry points; wooden planks let Leon board them up. Later, enemies use ladders to reach the upper floor, and a Brute adds a heavier close-range threat. The room does not need to become physically smaller to feel more constrained. More of its usable space is contested, and a previously manageable approach is no longer the whole problem.
+              - paragraph [ref=f8e85]: "Boarding a window and knocking away a ladder belong to the same practical vocabulary as staggering an enemy: each interferes with an approach. Their effects differ, but they all buy the player room to handle something else. The encounter links combat and environment through a common decision—where should I reduce pressure now? It also shows the limit of crowd control: interrupting one part of a fight does not resolve every active threat."
+              - paragraph [ref=f8e86]: The transferable lesson is to evaluate combat actions in their spatial context. If every action is judged only by damage per second, a designer can miss the reason an apparently weaker tool feels essential. A useful crowd-control action changes a dangerous arrangement into one the player can read, move through, or attack. Its feedback should make that changed arrangement visible.
+              - complementary [ref=f8e87]:
+                - strong [ref=f8e88]: Design principle
+                - text: Measure an attack’s effect on the next decision as well as on health bars. Interruption, grouping, and access can make a tool valuable without making it the strongest damage option.
+              - figure "In the house defense, controlling entrances competes with dealing damage." [ref=f8e89]:
+                - generic [ref=f8e90]:
+                  - generic [ref=f8e91]: Screenshot needed
+                  - paragraph [ref=f8e92]: Chapter 5, house defense with Luis. From downstairs, include one boarded window, another active approach, and the stairs. Capture before the scene becomes visually unreadable.
+                  - code [ref=f8e93]: cabin-entry-control.webp
+            - generic [ref=f8e95]:
+              - heading "03 / The knife puts a price on recovery" [level=2] [ref=f8e96]
+              - paragraph [ref=f8e97]: The remake’s knife makes defense part of the resource economy. Leon can parry eligible attacks, perform stealth kills, and use knife follow-ups on vulnerable enemies. These actions share a tool with limited durability. A successful defensive action can solve the immediate problem while reducing the number of similar answers available later.
+              - paragraph [ref=f8e98]: Consider a Ganado closing in with a weapon while Leon is focused elsewhere. A parry offers a way to respond without first opening distance. That gives the player a chance to recover from a crowded situation, but the durability cost means it cannot be treated as an unlimited substitute for positioning. The player trades future flexibility for immediate survival.
+              - paragraph [ref=f8e99]: This is why I would not describe the new knife as a simple power upgrade over the original. It expands the player’s responses while adding a constraint to those responses. Using it offensively can remove a threat before that threat demands ammunition or health. Saving it preserves a defensive option. The interesting decision is how much future protection to spend to simplify the present encounter.
+              - paragraph [ref=f8e100]: Repairing the Combat Knife at the Merchant extends that choice beyond the fight. Pesetas spent restoring it compete with other purchases and upgrades. The consequence of a close call is therefore not necessarily confined to damage taken. A player can leave an encounter alive and still arrive at the next preparation point with a cost to settle.
+              - paragraph [ref=f8e101]: "That connection makes recovery feel consequential, but it also creates a design risk. When a familiar defensive tool becomes unavailable, players can lose both capability and confidence. The system needs to communicate the remaining durability clearly. It also needs other usable responses: distance, gunfire, environmental control, or another available knife. Otherwise a recovery mechanic can become a dependency whose failure leaves too little room to act."
+              - paragraph [ref=f8e102]: "The knife also rewards practice without erasing its economic role. Better timing can make an eligible attack manageable, yet success still consumes durability. Difficulty settings affect parry requirements, so the exact timing challenge should not be generalized across every playthrough. The broader design relationship survives that variation: mechanical skill and resource planning answer different parts of the same threat."
+              - complementary [ref=f8e103]:
+                - strong [ref=f8e104]: Design principle
+                - text: A recovery tool can preserve agency while carrying a future cost. Make that cost visible, and keep alternative responses viable when the tool runs out.
+              - figure "The parry prevents an immediate hit while consuming a resource used by other knife actions." [ref=f8e105]:
+                - generic [ref=f8e106]:
+                  - generic [ref=f8e107]: Screenshot needed
+                  - paragraph [ref=f8e108]: Village combat, any clearly readable weapon-wielding Ganado. Capture the contact or sparks of a parry with the knife gauge visible. Use gameplay rather than Photo Mode for the HUD; a short recording can help select the frame.
+                  - code [ref=f8e109]: knife-parry-cost.webp
+            - generic [ref=f8e111]:
+              - heading "04 / Relief turns survival into preparation" [level=2] [ref=f8e112]
+              - paragraph [ref=f8e113]: An encounter has more meaning when there is time to understand what it cost. After the bell ends the opening village fight, the player can search the space that was just dangerous. The shift changes the task from tracking attackers to inspecting the environment. The buildings are familiar, but attention is now available for supplies and routes that were easy to miss during combat.
+              - paragraph [ref=f8e114]: This is a useful form of relief because it has a purpose. Searching can replenish resources; examining the arena can explain where a position failed. The next fight begins with both a different inventory and a better understanding of how the game uses space. A quieter interval can therefore support learning without adding another explicit tutorial.
+              - paragraph [ref=f8e115]: Crafting adds a further preparation decision. Gunpowder and Resources (S) can be used for different ammunition recipes, including handgun ammunition and shotgun shells. Until materials are converted, they preserve some flexibility. Crafting commits part of that flexibility to a particular response. A player expecting close crowd pressure may value shells differently from a player conserving them and relying more on the handgun.
+              - paragraph [ref=f8e116]: The attaché case makes this preparation visible. Weapons and supplies occupy grid space, so the loadout is a physical arrangement the player can inspect and adjust. However, inventory organization alone is not the whole resource problem. Fitting another item does not answer when to spend it. The important connection is between the supplies carried and the kinds of situations those supplies can help resolve.
+              - paragraph [ref=f8e117]: "The Merchant gives those decisions a longer horizon. Selling treasure, repairing equipment, and upgrading weapons turn the results of exploration and combat into future capability. The relief comes partly from changing the pace of decision-making: threats demand immediate responses, while the shop allows comparison and planning. It makes the player’s next entry into danger feel prepared, even though preparation cannot predict every arrangement of enemies."
+              - paragraph [ref=f8e118]: There is a balance to maintain. Too little breathing room can obscure why an encounter went wrong; too much can drain the urgency from the next one. The useful rhythm is an exchange between acting under pressure and deciding what to carry back into it. My earlier teardown identified tension and relief as central to Resident Evil 4. The remake makes that observation more concrete through the links between temporary control, consumable defenses, and deliberate preparation.
+              - complementary [ref=f8e119]:
+                - strong [ref=f8e120]: Design principle
+                - text: Give relief an active role. Let players interpret the previous encounter and make a consequential preparation choice before the next one.
+              - figure "Shared crafting materials keep options open until the player commits them to a recipe." [ref=f8e121]:
+                - generic [ref=f8e122]:
+                  - generic [ref=f8e123]: Screenshot needed
+                  - paragraph [ref=f8e124]: Any quiet preparation point after recipes are available. Open Crafting and frame both handgun ammo and shotgun shell recipes with material counts and existing ammo visible where the UI permits. Do not change inventory just to imply scarcity.
+                  - code [ref=f8e125]: crafting-choice.webp
+            - generic [ref=f8e127]:
+              - heading "Design takeaways" [level=2] [ref=f8e128]
+              - list [ref=f8e129]:
+                - listitem [ref=f8e130]:
+                  - strong [ref=f8e131]: Design the loss of control.
+                  - text: A strong position needs a readable reason to stop working and a next position worth considering. Test the transition between them, not only each position in isolation.
+                - listitem [ref=f8e132]:
+                  - strong [ref=f8e133]: Give tools a time value.
+                  - text: Evaluate whether an attack creates a reload opportunity, clears a route, or reduces the number of threats to track. Damage numbers alone miss these contributions.
+                - listitem [ref=f8e134]:
+                  - strong [ref=f8e135]: Price recovery without making it mandatory.
+                  - text: A consumable defense can rescue a bad situation and still matter to the economy. Clear resource feedback and viable alternatives keep that cost from becoming a dead end.
+                - listitem [ref=f8e136]:
+                  - strong [ref=f8e137]: Make quiet intervals change the next fight.
+                  - text: Exploration, crafting, and repairs are strongest when their decisions affect how the player handles the next encounter. Relief can carry the consequences of action forward.
+          - region "Sources and credits" [ref=f8e138]:
+            - heading "Sources & credits" [level=2] [ref=f8e139]
+            - paragraph [ref=f8e140]: Mechanics and encounter details were checked against the sources below. Interpretations of player behavior and design tradeoffs are my analysis.
+            - list [ref=f8e141]:
+              - listitem [ref=f8e142]:
+                - link "Resident Evil 4 on Steam" [ref=f8e143] [cursor=pointer]:
+                  - /url: https://store.steampowered.com/app/2050650/Resident_Evil_4/
+                - paragraph [ref=f8e144]: 2023 PC game identity, Capcom credits, and official hero screenshot.
+              - listitem [ref=f8e145]:
+                - 'link "Capcom official manual: Player Actions" [ref=f8e146] [cursor=pointer]':
+                  - /url: https://game.capcom.com/manual/re4/en/ps5/page/2/2
+                - paragraph [ref=f8e147]: Focused reticle, melee, and knife durability. Button labels are platform-specific; this article does not use them as PC bindings.
+              - listitem [ref=f8e148]:
+                - 'link "Capcom official manual: Crafting" [ref=f8e149] [cursor=pointer]':
+                  - /url: https://game.capcom.com/manual/re4/en/ps5/page/4/2
+                - paragraph [ref=f8e150]: Shared materials and ammunition recipes.
+              - listitem [ref=f8e151]:
+                - 'link "Xbox Wire: Updated combat with producer Yoshiaki Hirabayashi" [ref=f8e152] [cursor=pointer]':
+                  - /url: https://news.xbox.com/en-us/2023/03/10/talking-resident-evil-4-updated-combat/
+                - paragraph [ref=f8e153]: Primary interview on knife actions, repairs, movement while aiming, and difficulty-dependent parry timing.
+              - listitem [ref=f8e154]:
+                - 'link "PowerPyx: Remake Chapter 1 walkthrough" [ref=f8e155] [cursor=pointer]':
+                  - /url: https://www.powerpyx.com/resident-evil-4-remake-chapter-1-walkthrough/
+                - paragraph [ref=f8e156]: Secondary cross-check for shotgun house routes and the post-bell transition.
+              - listitem [ref=f8e157]:
+                - 'link "Push Square: Remake Chapter 5 walkthrough" [ref=f8e158] [cursor=pointer]':
+                  - /url: https://www.pushsquare.com/guides/resident-evil-4-remake-chapter-5-walkthrough
+                - paragraph [ref=f8e159]: Secondary cross-check for boarding windows, upper-floor ladders, and the Brute.
+    - contentinfo [ref=f8e160]:
+      - generic [ref=f8e161]:
+        - generic [ref=f8e162]:
+          - img "My portfolio logo" [ref=f8e164]
+          - generic [ref=f8e165]: Louis Chan
+        - paragraph [ref=f8e166]: Designing at the edge of possibility, where ideas become worlds and interaction gives them meaning. Every choice, space, and moment shapes the player’s journey — sic itur ad astra.
+        - generic [ref=f8e167]:
+          - generic [ref=f8e168]:
+            - heading "General" [level=3] [ref=f8e169]
+            - list [ref=f8e170]:
+              - listitem [ref=f8e171]:
+                - link "Home" [ref=f8e172] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f8e173]:
+                - link "Projects" [ref=f8e174] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=f8e175]:
+                - link "Blogs" [ref=f8e176] [cursor=pointer]:
+                  - /url: /blogs
+          - generic [ref=f8e177]:
+            - heading "About" [level=3] [ref=f8e178]
+            - list [ref=f8e179]:
+              - listitem [ref=f8e180]:
+                - link "About Me" [ref=f8e181] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=f8e182]:
+                - link "Contact" [ref=f8e183] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f8e184]:
+            - heading "Projects" [level=3] [ref=f8e185]
+            - list [ref=f8e186]:
+              - listitem [ref=f8e187]:
+                - link "Last Remains" [ref=f8e188] [cursor=pointer]:
+                  - /url: https://www.mylastday.xyz
+              - listitem [ref=f8e189]:
+                - link "Paper Bridge" [ref=f8e190] [cursor=pointer]:
+                  - /url: https://paper-bridge.vercel.app/dashboard
+              - listitem [ref=f8e191]:
+                - link "PopBox Studio" [ref=f8e192] [cursor=pointer]:
+                  - /url: https://www.popboxstudio.com/
+          - generic [ref=f8e193]:
+            - heading "Legal" [level=3] [ref=f8e194]
+            - list [ref=f8e195]:
+              - listitem [ref=f8e196]:
+                - link "Privacy Policy" [ref=f8e197] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f8e198]:
+                - link "Terms & Conditions" [ref=f8e199] [cursor=pointer]:
+                  - /url: /terms
+        - generic [ref=f8e200]:
+          - paragraph [ref=f8e201]: © 2026 Louis Chan. All rights reserved.
+          - generic [ref=f8e202]:
+            - link "LinkedIn profile (opens in a new tab)" [ref=f8e203] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/louiscch/
+            - link "itch.io profile (opens in a new tab)" [ref=f8e204] [cursor=pointer]:
+              - /url: https://louischan.itch.io/
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f8e210] [cursor=pointer]

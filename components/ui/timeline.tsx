@@ -65,7 +65,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </motion.div>
 
         {data.map((item, index) => (
-          <div key={index} className="flex justify-start pt-10 sm:pb-16 md:pt-40 md:gap-10">
+          <div
+            key={index}
+            className={`flex justify-start sm:pb-16 md:gap-10 ${index === 0 ? 'pt-6' : 'pt-10 md:pt-40'}`}>
             {/* Remove per-item marker entirely */}
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500">
@@ -96,7 +98,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className={[
               'absolute left-1/2 -translate-x-1/2 top-0 rounded-full',
               LINE_W,
-              'bg-gradient-to-t from-amber-500 via-amber-400 to-transparent',
+              'bg-gradient-to-t from-amber-500 via-amber-500 to-transparent',
               'from-[0%] via-[12%]',
             ].join(' ')}
           />

@@ -167,14 +167,14 @@ export function ExpandableCard({ cards, className }: ExpandableCardsProps) {
                 shrink-0 p-4 size-38
                 flex flex-col justify-center items-center
                 rounded-3xl relative z-0
-                border-[1.5] border-amber-400/80 dark:border-amber-400/40
+                border-[1.5] border-amber-500/80 dark:border-amber-400/40
 
                 transition-all duration-200 ease-out motion-reduce:transition-none
                 cursor-pointer
 
                 hover:-translate-y-1
                 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/30
-                hover:border-amber-400/90 dark:hover:border-amber-400/50
+                hover:border-amber-500/90 dark:hover:border-amber-400/50
                 hover:bg-neutral-50 dark:hover:bg-neutral-900
 
                 active:scale-[0.98]

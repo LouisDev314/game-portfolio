@@ -97,7 +97,7 @@ export function NavbarMobile() {
                     width={32}
                     height={32}
                     priority
-                    className="size-8 rounded-full border border-amber-400 object-cover dark:border-0"
+                    className="size-8 rounded-full border border-amber-500 object-cover dark:border-0"
                   />
                 </span>
 
@@ -138,7 +138,7 @@ export function NavbarMobile() {
                                 ? 'bg-neutral-100 font-medium text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100'
                                 : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100',
                             )}>
-                            {isActive && <Icon className="size-5 text-amber-400 shrink-0" />}
+                            {isActive && <Icon className="size-5 text-amber-500 shrink-0" />}
                             {!isActive && <Icon className="size-5 shrink-0" />}
                             {item.name}
                           </Link>

@@ -1,0 +1,268 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - img "Louis Chan portfolio logo" [ref=e4]
+      - generic [ref=e5]: Louis Chan
+    - generic [ref=e6]:
+      - link "Home" [ref=e7] [cursor=pointer]:
+        - /url: /
+      - link "Projects" [ref=e8] [cursor=pointer]:
+        - /url: /projects
+      - link "Blogs" [ref=e9] [cursor=pointer]:
+        - /url: /blogs
+      - link "About Me" [ref=e10] [cursor=pointer]:
+        - /url: /about
+      - generic [ref=e11]:
+        - button "More" [ref=e12]
+        - generic:
+          - generic:
+            - link "Privacy Policy":
+              - /url: /privacy
+            - link "Terms & Conditions":
+              - /url: /terms
+    - generic [ref=e15]:
+      - button "Switch to dark mode" [ref=e16]
+      - link "Connect with Louis Chan on LinkedIn (opens in a new tab)" [ref=e19] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/louiscch/
+        - generic [ref=e20]: Connect Now
+  - generic [ref=e26]:
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - heading "About Me" [level=1] [ref=e29]
+        - paragraph [ref=e31]: I’m Louis, a game designer focused on narrative, gameplay, level design, and emotional impact. I use environmental storytelling to shape player experience, while my software engineering background helps me prototype ideas and collaborate effectively with technical teams.
+      - generic [ref=e32]:
+        - heading "Skills & Toolkit" [level=2] [ref=e33]
+        - paragraph [ref=e34]: I design and prototype player experiences through gameplay, levels, systems, and storytelling.
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - heading "GAME DESIGN" [level=3] [ref=e38]
+            - generic [ref=e41]:
+              - generic [ref=e42]: Gameplay Design
+              - generic [ref=e45]: Playcentric Approach
+              - generic [ref=e48]: Core Loops
+              - generic [ref=e51]: Mechanics Design
+              - generic [ref=e54]: Systems Design
+              - generic [ref=e57]: Player Goals
+              - generic [ref=e60]: Pacing
+              - generic [ref=e63]: Progression
+              - generic [ref=e66]: Balancing
+          - generic [ref=e69]:
+            - heading "LEVEL DESIGN" [level=3] [ref=e70]
+            - generic [ref=e73]:
+              - generic [ref=e74]: Level Flow
+              - generic [ref=e77]: Environmental Storytelling
+              - generic [ref=e80]: Player Guidance
+              - generic [ref=e83]: Spatial Design
+              - generic [ref=e86]: Blockouts
+              - generic [ref=e89]: Critical Paths
+              - generic [ref=e92]: Exploration
+              - generic [ref=e95]: Pacing
+          - generic [ref=e98]:
+            - heading "PUZZLE & INTERACTION DESIGN" [level=3] [ref=e99]
+            - generic [ref=e102]:
+              - generic [ref=e103]: Affordances
+              - generic [ref=e106]: Difficulty Curves
+              - generic [ref=e109]: Puzzle Design
+              - generic [ref=e112]: Player Onboarding
+              - generic [ref=e115]: Feedback
+              - generic [ref=e118]: Interaction Design
+              - generic [ref=e121]: Discovery
+              - generic [ref=e124]: Risk / Reward
+          - generic [ref=e127]:
+            - heading "NARRATIVE & PLAYER EXPERIENCE" [level=3] [ref=e128]
+            - generic [ref=e131]:
+              - generic [ref=e132]: Emotional Pacing
+              - generic [ref=e135]: Experience Design
+              - generic [ref=e138]: Narrative Design
+              - generic [ref=e141]: Player Motivation
+              - generic [ref=e144]: Worldbuilding
+              - generic [ref=e147]: Atmosphere
+              - generic [ref=e150]: Story Beats
+          - generic [ref=e153]:
+            - heading "PROTOTYPING & ITERATION" [level=3] [ref=e154]
+            - generic [ref=e160]:
+              - generic [ref=e161]: Iterative Design
+              - generic [ref=e164]: Design Documentation
+              - generic [ref=e167]: Rapid Prototyping
+              - generic [ref=e170]: Playtesting
+              - generic [ref=e173]: Design Validation
+              - generic [ref=e176]: Greyboxing
+              - generic [ref=e179]: Balancing
+              - generic [ref=e182]: Feedback Analysis
+          - generic [ref=e185]:
+            - heading "TECHNICAL DESIGN & TOOLS" [level=3] [ref=e186]
+            - generic [ref=e189]:
+              - generic [ref=e190]: Unreal Engine 5
+              - generic [ref=e196]: Unity
+              - generic [ref=e202]: Aseprite
+              - generic [ref=e208]: Blender
+              - generic [ref=e214]: Technical Design
+              - generic [ref=e217]: Gameplay Scripting
+        - region [ref=e220]:
+          - generic [ref=e221]:
+            - heading "Work Experience" [level=2] [ref=e222]
+            - paragraph [ref=e223]: My experience across game production and software helps me turn ideas into testable, practical design decisions.
+          - generic [ref=e225]:
+            - img "profile picture" [ref=e228]
+            - generic [ref=e229]:
+              - heading "March 2026 - Present" [level=3] [ref=e231]
+              - article [ref=e233]:
+                - generic [ref=e234]:
+                  - heading "Founder & Full Stack Engineer" [level=4] [ref=e235]
+                  - link "PopBox Studio" [ref=e236] [cursor=pointer]:
+                    - /url: https://popboxstudio.com/
+                  - paragraph [ref=e237]: Calgary, AB · Remote
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: Product
+                    - generic [ref=e240]: Software
+                - list [ref=e241]:
+                  - listitem [ref=e242]:
+                    - generic [ref=e244]: Delivered the storefront, checkout, and order-management workflows end to end.
+                  - listitem [ref=e245]:
+                    - generic [ref=e247]: Built tools for managing products, orders, and fulfillment.
+                  - listitem [ref=e248]:
+                    - generic [ref=e250]: Worked through inventory and payment constraints to support reliable purchases.
+            - generic [ref=e251]:
+              - heading "March 2025 - March 2026" [level=3] [ref=e253]
+              - article [ref=e255]:
+                - generic [ref=e256]:
+                  - heading "Personal Banking Associate" [level=4] [ref=e257]
+                  - link "Bank of Montreal" [ref=e258] [cursor=pointer]:
+                    - /url: https://www.bmo.com/en-ca/main/personal/
+                  - paragraph [ref=e259]: Calgary, AB · On-site
+                  - generic [ref=e260]: Client Services
+                - list [ref=e262]:
+                  - listitem [ref=e263]:
+                    - generic [ref=e265]: Analyzed client information to support lending and credit decisions.
+                  - listitem [ref=e266]:
+                    - generic [ref=e268]: Coordinated across internal systems and stakeholders under time constraints.
+                  - listitem [ref=e269]:
+                    - generic [ref=e271]: Balanced accurate processing with risk controls and compliance requirements.
+            - generic [ref=e272]:
+              - heading "September 2024 - March 2025" [level=3] [ref=e274]
+              - article [ref=e276]:
+                - generic [ref=e277]:
+                  - heading "Project Manager" [level=4] [ref=e278]
+                  - link "Earn Alliance" [ref=e279] [cursor=pointer]:
+                    - /url: https://litepaper.earnalliance.com/
+                  - paragraph [ref=e280]: Hong Kong · Remote
+                  - generic [ref=e281]:
+                    - generic [ref=e282]: Production
+                    - generic [ref=e283]: Playtesting
+                - list [ref=e284]:
+                  - listitem [ref=e285]:
+                    - generic [ref=e287]: Provided design feedback from playtests.
+                  - listitem [ref=e288]:
+                    - generic [ref=e290]: Coordinated across art, design, development, and marketing.
+                  - listitem [ref=e291]:
+                    - generic [ref=e293]: Tracked milestones and translated product requirements into actionable tasks.
+                  - listitem [ref=e294]:
+                    - generic [ref=e296]: Resolved production bottlenecks to support delivery and iteration.
+            - generic [ref=e297]:
+              - heading "August 2023 - September 2024" [level=3] [ref=e299]
+              - article [ref=e301]:
+                - generic [ref=e302]:
+                  - heading "Full Stack Developer" [level=4] [ref=e303]
+                  - link "Virtual Gaming Technology" [ref=e304] [cursor=pointer]:
+                    - /url: https://www.vgt.com.hk/en/
+                  - paragraph [ref=e305]: Hong Kong · On-site
+                  - generic [ref=e306]: Software
+                - list [ref=e308]:
+                  - listitem [ref=e309]:
+                    - generic [ref=e311]: Reworked the frontend to improve responsiveness and the user experience.
+                  - listitem [ref=e312]:
+                    - generic [ref=e314]: Built services for real-time data and background processing.
+                  - listitem [ref=e315]:
+                    - generic [ref=e317]: Improved performance and stability in a live production environment.
+            - generic [ref=e318]:
+              - heading "September 2022 - December 2022" [level=3] [ref=e320]
+              - article [ref=e322]:
+                - generic [ref=e323]:
+                  - heading "Software Engineer Intern" [level=4] [ref=e324]
+                  - link "Future Successors" [ref=e325] [cursor=pointer]:
+                    - /url: https://futuresuccessors.org/
+                  - paragraph [ref=e326]: Atlanta, GA · Remote/On-site
+                  - generic [ref=e327]: Software
+                - list [ref=e329]:
+                  - listitem [ref=e330]:
+                    - generic [ref=e332]: Connected frontend features with backend and cloud services.
+                  - listitem [ref=e333]:
+                    - generic [ref=e335]: Refined data models and queries to improve performance.
+                  - listitem [ref=e336]:
+                    - generic [ref=e338]: Added validation and error handling to protect data integrity.
+            - generic [ref=e339]:
+              - heading "June 2022 - September 2022" [level=3] [ref=e341]
+              - article [ref=e343]:
+                - generic [ref=e344]:
+                  - heading "Xbox Summer Camp Engineer" [level=4] [ref=e345]
+                  - link "Microsoft · Xbox Game Camp" [ref=e346] [cursor=pointer]:
+                    - /url: https://www.xbox.com/en-US/xbox-game-studios/game-camp
+                  - paragraph [ref=e347]: Atlanta, GA · Remote/On-site
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: Gameplay
+                    - generic [ref=e350]: Prototyping
+                - list [ref=e351]:
+                  - listitem [ref=e352]:
+                    - generic [ref=e354]: Rapidly prototyped and iterated on gameplay features.
+                  - listitem [ref=e355]:
+                    - generic [ref=e357]: Implemented core systems for player interactions and game-state management.
+                  - listitem [ref=e358]:
+                    - generic [ref=e360]: Established shared development and code-review practices for the engineering team.
+    - contentinfo [ref=e362]:
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - img "My portfolio logo" [ref=e366]
+          - generic [ref=e367]: Louis Chan
+        - paragraph [ref=e368]: Designing at the edge of possibility, where ideas become worlds and interaction gives them meaning. Every choice, space, and moment shapes the player’s journey — sic itur ad astra.
+        - generic [ref=e369]:
+          - generic [ref=e370]:
+            - heading "General" [level=3] [ref=e371]
+            - list [ref=e372]:
+              - listitem [ref=e373]:
+                - link "Home" [ref=e374] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e375]:
+                - link "Projects" [ref=e376] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e377]:
+                - link "Blogs" [ref=e378] [cursor=pointer]:
+                  - /url: /blogs
+          - generic [ref=e379]:
+            - heading "About" [level=3] [ref=e380]
+            - list [ref=e381]:
+              - listitem [ref=e382]:
+                - link "About Me" [ref=e383] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e384]:
+                - link "Contact" [ref=e385] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e386]:
+            - heading "Projects" [level=3] [ref=e387]
+            - list [ref=e388]:
+              - listitem [ref=e389]:
+                - link "Last Remains" [ref=e390] [cursor=pointer]:
+                  - /url: https://www.mylastday.xyz
+              - listitem [ref=e391]:
+                - link "Paper Bridge" [ref=e392] [cursor=pointer]:
+                  - /url: https://paper-bridge.vercel.app/dashboard
+              - listitem [ref=e393]:
+                - link "PopBox Studio" [ref=e394] [cursor=pointer]:
+                  - /url: https://www.popboxstudio.com/
+          - generic [ref=e395]:
+            - heading "Legal" [level=3] [ref=e396]
+            - list [ref=e397]:
+              - listitem [ref=e398]:
+                - link "Privacy Policy" [ref=e399] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=e400]:
+                - link "Terms & Conditions" [ref=e401] [cursor=pointer]:
+                  - /url: /terms
+        - generic [ref=e402]:
+          - paragraph [ref=e403]: © 2026 Louis Chan. All rights reserved.
+          - generic [ref=e404]:
+            - link "LinkedIn profile (opens in a new tab)" [ref=e405] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/louiscch/
+            - link "itch.io profile (opens in a new tab)" [ref=e406] [cursor=pointer]:
+              - /url: https://louischan.itch.io/
+  - region "Notifications alt+T"
+  - alert [ref=e407]

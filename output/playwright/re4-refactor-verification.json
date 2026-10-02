@@ -1,0 +1,650 @@
+[
+  {
+    "width": 1440,
+    "theme": "light lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 240,
+            "y": 3343.1875,
+            "width": 468
+          },
+          {
+            "x": 732,
+            "y": 3343.1875,
+            "width": 468
+          }
+        ],
+        "stacked": false
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 240,
+            "y": 8336.3125,
+            "width": 468
+          },
+          {
+            "x": 732,
+            "y": 8336.3125,
+            "width": 468
+          }
+        ],
+        "stacked": false
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  },
+  {
+    "width": 1440,
+    "theme": "dark lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 240,
+            "y": 3343.1875,
+            "width": 468
+          },
+          {
+            "x": 732,
+            "y": 3343.1875,
+            "width": 468
+          }
+        ],
+        "stacked": false
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 240,
+            "y": 8336.515625,
+            "width": 468
+          },
+          {
+            "x": 732,
+            "y": 8336.515625,
+            "width": 468
+          }
+        ],
+        "stacked": false
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  },
+  {
+    "width": 390,
+    "theme": "light lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 3044.75,
+            "width": 342
+          },
+          {
+            "x": 24,
+            "y": 3298,
+            "width": 342
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 8034.25,
+            "width": 342
+          },
+          {
+            "x": 24,
+            "y": 8287.5,
+            "width": 342
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  },
+  {
+    "width": 390,
+    "theme": "dark lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 3044.75,
+            "width": 342
+          },
+          {
+            "x": 24,
+            "y": 3298,
+            "width": 342
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 8034.25,
+            "width": 342
+          },
+          {
+            "x": 24,
+            "y": 8287.5,
+            "width": 342
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  },
+  {
+    "width": 320,
+    "theme": "light lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 3326.625,
+            "width": 272
+          },
+          {
+            "x": 24,
+            "y": 3564.5,
+            "width": 272
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 8847.875,
+            "width": 272
+          },
+          {
+            "x": 24,
+            "y": 9085.75,
+            "width": 272
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  },
+  {
+    "width": 320,
+    "theme": "dark lenis lenis-scrolling",
+    "status": 200,
+    "errors": [],
+    "overflow": false,
+    "visuals": 10,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in a wide village or environment view, establishing the location."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the open village square with Ganados approaching from multiple directions."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The shotgun house doorway, stairs and windows, showing entry and escape routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The open village square with several enemy approach routes."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "A confined interior with enemies approaching through a doorway."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon kicking a staggered Ganado with nearby enemies within reach."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon defending the house with Luis, with boarded windows and another active entry point visible."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon parrying a weapon attack with his knife at the moment of contact."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The Merchant repair menu showing Combat Knife durability and its peseta repair cost."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "Leon in the village during active combat, with approaching Ganados."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "The village after the bell, with clear paths to search the buildings."
+      },
+      {
+        "loaded": true,
+        "src": "/_next/image?url=%2Fblogs%2Fresident-evil-4-analysis%2Fhero-official.webp&w=3840&q=75",
+        "alt": "An open attaché case with weapons, ammunition and crafting materials arranged in its grid."
+      }
+    ],
+    "comparisons": [
+      {
+        "id": "spaceComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 3326.625,
+            "width": 272
+          },
+          {
+            "x": 24,
+            "y": 3564.5,
+            "width": 272
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "reliefComparison",
+        "figs": [
+          {
+            "x": 24,
+            "y": 8847.875,
+            "width": 272
+          },
+          {
+            "x": 24,
+            "y": 9085.75,
+            "width": 272
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "readTime": true,
+    "takeaways": 4,
+    "sources": 7,
+    "maxParagraphWords": 58
+  }
+]

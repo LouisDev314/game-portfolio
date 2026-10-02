@@ -40,9 +40,9 @@ export default function BlogArticles({ articles }: { articles: BlogArticle[] }) 
               aria-controls="blog-results"
               onClick={() => setActiveFilter(value)}
               className={cn(
-                'inline-flex min-h-11 items-center justify-center rounded-full border px-4 py-2 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600 dark:focus-visible:outline-amber-400',
+                'inline-flex min-h-11 items-center justify-center rounded-full border px-4 py-2 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-500 dark:focus-visible:outline-amber-400',
                 active
-                  ? 'border-amber-400/80 bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-200'
+                  ? 'border-amber-500/80 bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-200'
                   : 'border-neutral-300 bg-white text-neutral-600 hover:border-neutral-400 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-400 dark:hover:border-neutral-500',
               )}>
               {label}
@@ -68,15 +68,15 @@ export default function BlogArticles({ articles }: { articles: BlogArticle[] }) 
             {visibleArticles.map((article) => (
               <article
                 key={article.slug}
-                className="overflow-hidden rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
+                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-neutral-200 bg-white transition duration-200 hover:border-amber-500/90 hover:bg-neutral-50 hover:shadow-lg hover:shadow-black/5 motion-safe:hover:-translate-y-1 focus-within:border-amber-500/90 focus-within:ring-2 focus-within:ring-amber-500 focus-within:ring-offset-2 focus-within:ring-offset-neutral-50 motion-reduce:transition-none dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-amber-400/50 dark:hover:shadow-black/30 dark:focus-within:border-amber-400/50 dark:focus-within:ring-offset-neutral-950">
                 {article.thumbnail && (
-                  <div className="relative aspect-video">
+                  <div className="relative aspect-video overflow-hidden">
                     <Image
                       src={article.thumbnail.src}
                       alt={article.thumbnail.alt}
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-300 motion-safe:group-hover:scale-[1.015] motion-reduce:transition-none"
                     />
                   </div>
                 )}
@@ -94,7 +94,7 @@ export default function BlogArticles({ articles }: { articles: BlogArticle[] }) 
                   <h2 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
                     <Link
                       href={`/blogs/${article.slug}`}
-                      className="rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-600 dark:focus-visible:outline-amber-400">
+                      className="cursor-pointer rounded-sm after:absolute after:inset-0 group-hover:underline underline-offset-4 focus-visible:outline-none">
                       {article.title}
                     </Link>
                   </h2>

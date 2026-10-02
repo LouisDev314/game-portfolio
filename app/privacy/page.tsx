@@ -13,7 +13,7 @@ function Container({ children }: { children: React.ReactNode }) {
         aria-hidden="true"
         className="pointer-events-none fixed inset-0 opacity-70 [mask-image:radial-gradient(70%_50%_at_50%_0%,black,transparent)]">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]" />
-        <div className="absolute -top-24 left-1/2 h-64 w-[44rem] -translate-x-1/2 rounded-full bg-amber-400/15 blur-3xl dark:bg-amber-500/10" />
+        <div className="absolute -top-24 left-1/2 h-64 w-[44rem] -translate-x-1/2 rounded-full bg-amber-500/15 blur-3xl dark:bg-amber-500/10" />
       </div>
 
       {children}

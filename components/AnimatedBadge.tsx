@@ -34,7 +34,7 @@ export function AnimatedBadge({
       data-featured={featured || undefined}
       className={cn(
         'relative inline-flex cursor-default overflow-hidden rounded-full border border-neutral-200 bg-neutral-100 px-3 py-1 text-sm text-neutral-700 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-300',
-        featured && 'border-amber-400/80 dark:border-amber-400/80',
+        featured && 'border-amber-500/80 dark:border-amber-400/80',
       )}>
       <motion.span
         variants={{

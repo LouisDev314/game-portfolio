@@ -1,0 +1,85 @@
+- generic [active] [ref=f1e1]:
+  - button "Toggle navigation menu" [ref=f1e5]:
+    - img "Louis Chan portfolio logo" [ref=f1e7]
+    - generic [ref=f1e8]: Louis Chan
+  - generic [ref=f1e11]:
+    - main [ref=f1e12]:
+      - generic [ref=f1e13]:
+        - heading "Blogs" [level=1] [ref=f1e14]
+        - paragraph [ref=f1e15]: Design notes from my own work and analysis of the games I study.
+      - paragraph [ref=f1e16]: Local editorial preview · Draft articles are hidden in production.
+      - region "Blog articles" [ref=f1e17]:
+        - group "Filter articles by category" [ref=f1e18]:
+          - button "All" [pressed] [ref=f1e19]
+          - button "Design Notes" [ref=f1e20]
+          - button "Game Analysis" [ref=f1e21]
+        - generic [ref=f1e22]:
+          - status [ref=f1e23]: 1 article shown.
+          - article [ref=f1e25]:
+            - img "Leon on a misty woodland path in Resident Evil 4 Remake." [ref=f1e27]
+            - generic [ref=f1e28]:
+              - generic [ref=f1e29]:
+                - generic [ref=f1e30]: Draft
+                - generic [ref=f1e31]: Game Analysis
+              - heading [level=2] [ref=f1e32]:
+                - link "Buying Time in Resident Evil 4 Remake" [ref=f1e33] [cursor=pointer]:
+                  - /url: /blogs/buying-time-resident-evil-4-remake
+              - paragraph [ref=f1e34]: How the 2023 remake turns positioning, crowd control, and resource spending into temporary breathing room—and keeps that room from becoming permanent safety.
+    - contentinfo [ref=f1e35]:
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - img "My portfolio logo" [ref=f1e39]
+          - generic [ref=f1e40]: Louis Chan
+        - paragraph [ref=f1e41]: Designing at the edge of possibility, where ideas become worlds and interaction gives them meaning. Every choice, space, and moment shapes the player’s journey — sic itur ad astra.
+        - generic [ref=f1e42]:
+          - generic [ref=f1e43]:
+            - heading "General" [level=3] [ref=f1e44]
+            - list [ref=f1e45]:
+              - listitem [ref=f1e46]:
+                - link "Home" [ref=f1e47] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f1e48]:
+                - link "Projects" [ref=f1e49] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=f1e50]:
+                - link "Blogs" [ref=f1e51] [cursor=pointer]:
+                  - /url: /blogs
+          - generic [ref=f1e52]:
+            - heading "About" [level=3] [ref=f1e53]
+            - list [ref=f1e54]:
+              - listitem [ref=f1e55]:
+                - link "About Me" [ref=f1e56] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=f1e57]:
+                - link "Contact" [ref=f1e58] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=f1e59]:
+            - heading "Projects" [level=3] [ref=f1e60]
+            - list [ref=f1e61]:
+              - listitem [ref=f1e62]:
+                - link "Last Remains" [ref=f1e63] [cursor=pointer]:
+                  - /url: https://www.mylastday.xyz
+              - listitem [ref=f1e64]:
+                - link "Paper Bridge" [ref=f1e65] [cursor=pointer]:
+                  - /url: https://paper-bridge.vercel.app/dashboard
+              - listitem [ref=f1e66]:
+                - link "PopBox Studio" [ref=f1e67] [cursor=pointer]:
+                  - /url: https://www.popboxstudio.com/
+          - generic [ref=f1e68]:
+            - heading "Legal" [level=3] [ref=f1e69]
+            - list [ref=f1e70]:
+              - listitem [ref=f1e71]:
+                - link "Privacy Policy" [ref=f1e72] [cursor=pointer]:
+                  - /url: /privacy
+              - listitem [ref=f1e73]:
+                - link "Terms & Conditions" [ref=f1e74] [cursor=pointer]:
+                  - /url: /terms
+        - generic [ref=f1e75]:
+          - paragraph [ref=f1e76]: © 2026 Louis Chan. All rights reserved.
+          - generic [ref=f1e77]:
+            - link "LinkedIn profile (opens in a new tab)" [ref=f1e78] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/louiscch/
+            - link "itch.io profile (opens in a new tab)" [ref=f1e79] [cursor=pointer]:
+              - /url: https://louischan.itch.io/
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f1e85] [cursor=pointer]

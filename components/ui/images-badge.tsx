@@ -95,10 +95,10 @@ export function ImagesBadge({
           transformStyle: 'preserve-3d',
         }}>
         {/* Folder Back */}
-        <div className="absolute inset-0 rounded-[4px] bg-gradient-to-b from-amber-400 to-amber-500 shadow-sm dark:from-amber-500 dark:to-amber-600">
+        <div className="absolute inset-0 rounded-[4px] bg-gradient-to-b from-amber-500 to-amber-500 shadow-sm dark:from-amber-500 dark:to-amber-600">
           {/* Folder Tab */}
           <div
-            className="absolute left-0.5 rounded-t-[2px] bg-gradient-to-b from-amber-300 to-amber-400 dark:from-amber-400 dark:to-amber-500"
+            className="absolute left-0.5 rounded-t-[2px] bg-gradient-to-b from-amber-500 to-amber-500 dark:from-amber-400 dark:to-amber-500"
             style={{
               top: -tabHeight * 0.65,
               width: tabWidth,
@@ -164,7 +164,7 @@ export function ImagesBadge({
 
         {/* Folder Front (flattens on hover) */}
         <motion.div
-          className="absolute inset-x-0 bottom-0 h-[85%] origin-bottom rounded-[4px] bg-gradient-to-b from-amber-300 to-amber-400 shadow-sm dark:from-amber-400 dark:to-amber-500"
+          className="absolute inset-x-0 bottom-0 h-[85%] origin-bottom rounded-[4px] bg-gradient-to-b from-amber-500 to-amber-500 shadow-sm dark:from-amber-400 dark:to-amber-500"
           animate={{
             rotateX: isHovered ? -45 : -25,
             scaleY: isHovered ? 0.8 : 1,
@@ -179,7 +179,7 @@ export function ImagesBadge({
             zIndex: 20,
           }}>
           {/* Folder line detail */}
-          <div className="absolute top-1 right-1 left-1 h-px bg-amber-200/50 dark:bg-amber-300/50" />
+          <div className="absolute top-1 right-1 left-1 h-px bg-amber-500/50 dark:bg-amber-300/50" />
         </motion.div>
       </motion.div>
 

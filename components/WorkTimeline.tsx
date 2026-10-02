@@ -1,259 +1,176 @@
 import React from 'react';
 import { Timeline } from '@/components/ui/timeline';
-import { Briefcase, MapPin } from 'lucide-react';
-import Badge from '@/components/Badge';
 import { LinkPreview } from '@/components/ui/link-preview';
 
-function MetaPill({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/70 px-3 py-1 text-xs text-neutral-700 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:text-neutral-200">
-      {icon}
-      <span className="leading-none">{children}</span>
-    </span>
-  );
-}
-
-function CompanyHeader({
-  company,
-  companyUrl,
-  role,
-  location,
-  workType,
-}: {
+type Experience = {
+  id: string;
+  dates: string;
+  role: string;
   company: string;
   companyUrl: string;
-  role: string;
   location: string;
   workType: string;
-}) {
-  return (
-    <div className="mb-4">
-      <div className="flex flex-col gap-1">
-        <LinkPreview
-          url={companyUrl}
-          className="text-base underline md:text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-          {company}
-        </LinkPreview>
-        <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300">{role}</p>
-      </div>
+  tags: string[];
+  contributions: string[];
+};
 
-      <div className="mt-3 flex flex-wrap gap-2">
-        <MetaPill icon={<MapPin className="size-3.5 opacity-80" />}>{location}</MetaPill>
-        <MetaPill icon={<Briefcase className="size-3.5 opacity-80" />}>{workType}</MetaPill>
-      </div>
-    </div>
+// Preserve the original chronological order.
+const experiences: Experience[] = [
+  {
+    id: 'popbox-studio',
+    dates: 'March 2026 - Present',
+    role: 'Founder & Full Stack Engineer',
+    company: 'PopBox Studio',
+    companyUrl: 'https://popboxstudio.com/',
+    location: 'Calgary, AB',
+    workType: 'Remote',
+    tags: ['Product', 'Software'],
+    contributions: [
+      'Delivered the storefront, checkout, and order-management workflows end to end.',
+      'Built tools for managing products, orders, and fulfillment.',
+      'Worked through inventory and payment constraints to support reliable purchases.',
+    ],
+  },
+  {
+    id: 'bmo',
+    dates: 'March 2025 - March 2026',
+    role: 'Personal Banking Associate',
+    company: 'Bank of Montreal',
+    companyUrl: 'https://www.bmo.com/en-ca/main/personal/',
+    location: 'Calgary, AB',
+    workType: 'On-site',
+    tags: ['Client Services'],
+    contributions: [
+      'Analyzed client information to support lending and credit decisions.',
+      'Coordinated across internal systems and stakeholders under time constraints.',
+      'Balanced accurate processing with risk controls and compliance requirements.',
+    ],
+  },
+  {
+    id: 'earn-alliance',
+    dates: 'September 2024 - March 2025',
+    role: 'Project Manager',
+    company: 'Earn Alliance',
+    companyUrl: 'https://litepaper.earnalliance.com/',
+    location: 'Hong Kong',
+    workType: 'Remote',
+    tags: ['Production', 'Playtesting'],
+    contributions: [
+      'Provided design feedback from playtests.',
+      'Coordinated across art, design, development, and marketing.',
+      'Tracked milestones and translated product requirements into actionable tasks.',
+      'Resolved production bottlenecks to support delivery and iteration.',
+    ],
+  },
+  {
+    id: 'vgt',
+    dates: 'August 2023 - September 2024',
+    role: 'Full Stack Developer',
+    company: 'Virtual Gaming Technology',
+    companyUrl: 'https://www.vgt.com.hk/en/',
+    location: 'Hong Kong',
+    workType: 'On-site',
+    tags: ['Software'],
+    contributions: [
+      'Reworked the frontend to improve responsiveness and the user experience.',
+      'Built services for real-time data and background processing.',
+      'Improved performance and stability in a live production environment.',
+    ],
+  },
+  {
+    id: 'future-successors',
+    dates: 'September 2022 - December 2022',
+    role: 'Software Engineer Intern',
+    company: 'Future Successors',
+    companyUrl: 'https://futuresuccessors.org/',
+    location: 'Atlanta, GA',
+    workType: 'Remote/On-site',
+    tags: ['Software'],
+    contributions: [
+      'Connected frontend features with backend and cloud services.',
+      'Refined data models and queries to improve performance.',
+      'Added validation and error handling to protect data integrity.',
+    ],
+  },
+  {
+    id: 'microsoft',
+    dates: 'June 2022 - September 2022',
+    role: 'Xbox Summer Camp Engineer',
+    company: 'Microsoft · Xbox Game Camp',
+    companyUrl: 'https://www.xbox.com/en-US/xbox-game-studios/game-camp',
+    location: 'Atlanta, GA',
+    workType: 'Remote/On-site',
+    tags: ['Gameplay', 'Prototyping'],
+    contributions: [
+      'Rapidly prototyped and iterated on gameplay features.',
+      'Implemented core systems for player interactions and game-state management.',
+      'Established shared development and code-review practices for the engineering team.',
+    ],
+  },
+];
+
+function ExperienceCard({ experience }: { experience: Experience }) {
+  return (
+    <>
+      <article
+        aria-labelledby={`${experience.id}-role`}
+        className="min-w-0 rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
+        <div className="mb-4">
+          <h4
+            id={`${experience.id}-role`}
+            className="text-lg font-semibold leading-snug text-neutral-900 dark:text-neutral-100 sm:text-xl md:text-2xl">
+            {experience.role}
+          </h4>
+          <LinkPreview
+            url={experience.companyUrl}
+            className="mt-1 inline-block max-w-full break-words text-sm font-medium text-neutral-700 underline decoration-neutral-300 underline-offset-4 dark:text-neutral-300 dark:decoration-neutral-600 md:text-base">
+            {experience.company}
+          </LinkPreview>
+          <p className="mt-2 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+            {experience.location} · {experience.workType}
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {experience.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-600 dark:bg-white/5 dark:text-neutral-400">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed dark:text-neutral-300">
+          {experience.contributions.map((contribution) => (
+            <li key={contribution} className="flex gap-2.5">
+              <span aria-hidden="true" className="mt-2 size-1.5 sm:size-1.75 shrink-0 rounded-full bg-amber-400" />
+              <span>{contribution}</span>
+            </li>
+          ))}
+        </ul>
+      </article>
+    </>
   );
 }
 
 export function WorkTimeline() {
-  const data = [
-    {
-      title: 'March 2026 - Present',
-      content: (
-        <div
-          key="popbox-studio"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="PopBox Studio"
-            companyUrl="https://popboxstudio.com/"
-            location="Calgary, AB"
-            role="Founder & Full Stack Engineer"
-            workType="Remote"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Built a production-ready e-commerce platform for anime collectibles with a server-rendered storefront,
-            Stripe checkout, and a complete order lifecycle. Implemented inventory reservation, guest checkout, and
-            admin workflows for products, orders, and fulfillment. Designed a scalable PostgreSQL/Supabase backend with
-            strong validation, idempotent order handling, and reliable payment integration.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-1.5">
-            <Badge title="Next.js" hasAnim={false} />
-            <Badge title="Tailwind CSS" hasAnim={false} />
-            <Badge title="Vercel" hasAnim={false} />
-            <Badge title="Node.js" hasAnim={false} />
-            <Badge title="Express" hasAnim={false} />
-            <Badge title="TypeScript" hasAnim={false} />
-            <Badge title="PostgreSQL" hasAnim={false} />
-            <Badge title="Supabase" hasAnim={false} />
-            <Badge title="Docker" hasAnim={false} />
-            <Badge title="Stripe" hasAnim={false} />
-            <Badge title="GitHub Actions (CI/CD)" hasAnim={false} />
-            <Badge title="TanStack Query" hasAnim={false} />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: 'March 2025 - March 2026',
-      content: (
-        <div
-          key="bmo"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="Bank of Montreal"
-            companyUrl="https://www.bmo.com/en-ca/main/personal/"
-            location="Calgary, AB"
-            role="Personal Banking Associate"
-            workType="On-site"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Analyzed client financial data and requirements to support lending and credit workflows in a high-volume
-            banking environment. Ensured accurate processing and compliance with risk controls while coordinating across
-            internal systems and stakeholders. Applied structured problem-solving to improve workflow efficiency and
-            decision accuracy in time-sensitive, production-like conditions.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: 'September 2024 - March 2025',
-      content: (
-        <div
-          key="earn-alliance"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="Earn Alliance"
-            companyUrl="https://litepaper.earnalliance.com/"
-            location="Hong Kong"
-            role="Project Manager"
-            workType="Remote"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Led Agile delivery across cross-functional teams, translating product requirements into actionable technical
-            tasks and coordinating execution through tools like Jira and Asana. Identified and resolved production
-            bottlenecks, improving team productivity by 120% and increasing user retention by 35%. Worked closely with
-            engineers and stakeholders to ensure reliable delivery, clear prioritization, and efficient iteration in a
-            fast-paced environment.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-1.5">
-            <Badge title="JIRA" hasAnim={false} />
-            <Badge title="Asana" hasAnim={false} />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: 'August 2023 - September 2024',
-      content: (
-        <div
-          key="vgt"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="Virtual Gaming Technology"
-            companyUrl="https://www.vgt.com.hk/en/"
-            location="Hong Kong"
-            role="Full Stack Developer"
-            workType="On-site"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Designed and built distributed backend services using Java Spring Boot in an event-driven architecture to
-            process high-volume real-time data at scale. Integrated Kafka-based asynchronous messaging to improve system
-            reliability and decouple services for efficient background processing. Revamped frontend architecture and
-            migrated components to SolidJS, achieving up to 350% faster rendering and significantly smoother user
-            experiences. Optimized system performance and stability, supporting over 100k concurrent users in
-            production.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-1.5">
-            <Badge title="Java Spring Boot" hasAnim={false} />
-            <Badge title="SQL" hasAnim={false} />
-            <Badge title="Apache Kafka" hasAnim={false} />
-            <Badge title="Event-Driven Architecture" hasAnim={false} />
-            <Badge title="Distributed Systems" hasAnim={false} />
-            <Badge title="SolidJS" hasAnim={false} />
-            <Badge title="Tailwind CSS" hasAnim={false} />
-            <Badge title="GitLab CI/CD" hasAnim={false} />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: 'September 2022 - December 2022',
-      content: (
-        <div
-          key="future-successors"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="Future Successors"
-            companyUrl="https://futuresuccessors.org/"
-            location="Atlanta, GA"
-            role="Software Engineer Intern"
-            workType="Remote/On-site"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Built backend APIs using FastAPI to support secure communication between frontend and cloud services.
-            Designed and optimized data models and database queries, improving performance by 50% while ensuring data
-            integrity through validation and error handling. Integrated AWS-based workflows and CI/CD pipelines to
-            streamline deployment and support reliable, production-ready feature delivery.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-1.5">
-            <Badge title="Node.js" hasAnim={false} />
-            <Badge title="Express" hasAnim={false} />
-            <Badge title="React Native" hasAnim={false} />
-            <Badge title="MongoDB" hasAnim={false} />
-            <Badge title="NoSQL" hasAnim={false} />
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: 'June 2022 - September 2022',
-      content: (
-        <div
-          key="microsoft"
-          className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/5 md:p-7">
-          <CompanyHeader
-            company="Microsoft"
-            companyUrl="https://www.xbox.com/en-US/xbox-game-studios/game-camp"
-            location="Atlanta, GA"
-            role="Xbox Summer Camp Engineer"
-            workType="Remote/On-site"
-          />
-
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-            Built a complete gameplay project in Unreal Engine 5 using C++ and Blueprint, implementing core systems for
-            state management and player interactions. Led a team of three engineers, establishing Git workflows, coding
-            standards, and code review practices to improve code quality and team efficiency. Rapidly prototyped and
-            iterated on gameplay features in an agile environment, delivering a polished project under tight timelines.
-          </p>
-
-          <div className="mt-5 flex flex-wrap gap-1.5">
-            <Badge title="Unreal Engine 5" hasAnim={false} />
-            <Badge title="C++" hasAnim={false} />
-            <Badge title="Blueprint Visual Scripting" hasAnim={false} />
-            <Badge title="Git" hasAnim={false} />
-          </div>
-        </div>
-      ),
-    },
-  ];
+  const data = experiences.map((experience) => ({
+    title: experience.dates,
+    content: <ExperienceCard key={experience.id} experience={experience} />,
+  }));
 
   return (
-    <section className="relative w-full">
-      {/* Header */}
-      <div className="mx-auto my-16 max-w-3xl px-4 text-center md:my-20">
-        <p className="text-sm font-medium tracking-widest text-neutral-500 dark:text-neutral-400">WORK EXPERIENCE</p>
-
-        <h2 className="mt-3 text-2xl font-semibold text-neutral-900 dark:text-neutral-100 md:text-4xl">
-          Building useful things—end to end.
+    <section aria-labelledby="work-experience-heading" className="relative w-full">
+      <div className="mt-12">
+        <h2
+          id="work-experience-heading"
+          className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100">
+          Work Experience
         </h2>
-
-        <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300 md:text-base">
-          A snapshot of the roles where I shipped products, scaled systems, and automated real workflows.
+        <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-10">
+          My experience across game production and software helps me turn ideas into testable, practical design
+          decisions.
         </p>
-
-        {/* subtle divider */}
-        <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-amber-400/70 to-transparent" />
       </div>
-
       <Timeline data={data} />
     </section>
   );

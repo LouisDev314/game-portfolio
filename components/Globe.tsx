@@ -182,7 +182,7 @@ export function Globe() {
   };
 
   return (
-    <div className="no-scrollbar relative w-full h-full rounded-3xl bg-white border border-amber-400 dark:bg-black overflow-hidden">
+    <div className="no-scrollbar relative w-full h-full rounded-3xl bg-white border border-amber-500 dark:bg-black overflow-hidden">
       {/* subtle frame glow */}
       <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5 dark:ring-white/10" />
 

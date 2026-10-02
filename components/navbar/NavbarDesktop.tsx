@@ -42,7 +42,7 @@ export function NavbarDesktop() {
               width={32}
               height={32}
               priority
-              className="size-8 rounded-full border border-amber-400 object-cover dark:border-0"
+              className="size-8 rounded-full border border-amber-500 object-cover dark:border-0"
             />
             <span className="text-sm font-semibold whitespace-nowrap">Louis Chan</span>
           </div>
@@ -57,7 +57,7 @@ export function NavbarDesktop() {
                   className={cn(
                     'px-3 py-1.5 text-sm rounded-full transition-colors font-medium whitespace-nowrap relative',
                     isActive
-                      ? 'bg-neutral-900/5 text-amber-400 dark:bg-white/10'
+                      ? 'bg-neutral-900/5 text-amber-500 dark:bg-white/10'
                       : 'hover:bg-neutral-900/5 dark:hover:bg-white/10 text-neutral-600 dark:text-neutral-300',
                   )}>
                   {item.name}
