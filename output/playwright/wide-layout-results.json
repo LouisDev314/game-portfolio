@@ -1,0 +1,314 @@
+[
+  {
+    "width": 3840,
+    "height": 2160,
+    "hero": {
+      "top": 0,
+      "height": 2160,
+      "contentCenter": 1079.9921875,
+      "viewportHeight": 2160,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        }
+      ]
+    }
+  },
+  {
+    "width": 3840,
+    "height": 1600,
+    "hero": {
+      "top": 0,
+      "height": 1600,
+      "contentCenter": 799.9921875,
+      "viewportHeight": 1600,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 1796.40625,
+          "right": 2408.5,
+          "dateDelta": 0
+        }
+      ]
+    }
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "hero": {
+      "top": 0,
+      "height": 1080,
+      "contentCenter": 539.9921875,
+      "viewportHeight": 1080,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 836.40625,
+          "right": 1448.5,
+          "dateDelta": 0
+        }
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "hero": {
+      "top": 0,
+      "height": 900,
+      "contentCenter": 449.9921875,
+      "viewportHeight": 900,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        },
+        {
+          "width": 612.09375,
+          "left": 596.40625,
+          "right": 1208.5,
+          "dateDelta": 0
+        }
+      ]
+    }
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "hero": {
+      "top": 0,
+      "height": 1024,
+      "contentCenter": 511.9921875,
+      "viewportHeight": 1024,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        },
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        },
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        },
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        },
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        },
+        {
+          "width": 357.40625,
+          "left": 315.59375,
+          "right": 673,
+          "dateDelta": 0
+        }
+      ]
+    }
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "hero": {
+      "top": 0,
+      "height": 844,
+      "contentCenter": 421.9921875,
+      "viewportHeight": 844,
+      "overflow": false
+    },
+    "timeline": {
+      "overflow": false,
+      "cards": [
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -2336.125
+        },
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -2887.625
+        },
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -3439.125
+        },
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -4019.375
+        },
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -4523.375
+        },
+        {
+          "width": 231,
+          "left": 104,
+          "right": 335,
+          "dateDelta": -5052.125
+        }
+      ]
+    }
+  }
+]

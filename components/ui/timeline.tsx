@@ -37,7 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 85%', 'end 10%'],
+    offset: ['start center', 'end center'],
   });
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height], { clamp: true });
@@ -67,15 +67,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`flex justify-start sm:pb-16 md:gap-10 ${index === 0 ? 'pt-6' : 'pt-10 md:pt-40'}`}>
+            className={`grid grid-cols-1 sm:pb-16 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.5fr)] md:gap-10 ${index === 0 ? 'pt-6' : 'pt-10 md:pt-24'}`}>
             {/* Remove per-item marker entirely */}
-            <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+            <div className="hidden min-w-0 self-start md:block">
               <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-0 w-full">
+            <div className="relative min-w-0 pl-20 pr-4 md:pl-0 w-full">
               <h3 className="md:hidden block text-xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
