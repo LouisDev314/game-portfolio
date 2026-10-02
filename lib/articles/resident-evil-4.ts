@@ -15,7 +15,7 @@ export const re4Visuals = {
       'Replace with a wide RE4 Remake village/environment capture. This should establish atmosphere and location rather than explain a mechanic.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/1.webp`,
         alt: 'Leon in a wide village or environment view, establishing the location.',
         caption: '',
         annotations: [],
@@ -29,7 +29,7 @@ export const re4Visuals = {
       'Replace with a gameplay capture from the village square showing multiple possible enemy approach directions and open movement space.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/2.webp`,
         alt: 'Leon in the open village square with Ganados approaching from multiple directions.',
         caption: 'Open space gives Leon room to move, but increases the number of approaches he must track.',
         annotations: [],
@@ -43,7 +43,7 @@ export const re4Visuals = {
       'Replace with a gameplay capture of the shotgun house showing the doorway, stairs, windows, or roof route. This image should support the idea that the house is a temporary tactical position, not permanent safety.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/3.webp`,
         alt: 'The shotgun house doorway, stairs and windows, showing entry and escape routes.',
         caption: 'The house reduces immediate exposure, but its multiple access points keep the position temporary.',
         annotations: [],
@@ -57,13 +57,13 @@ export const re4Visuals = {
       'Replace left with an open village combat capture. Replace right with an interior or doorway capture. The comparison should show that open spaces increase approach directions while confined spaces simplify tracking but reduce escape space.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/4a.webp`,
         alt: 'The open village square with several enemy approach routes.',
         caption: 'More movement space, more directions to watch.',
         annotations: [],
       },
       {
-        src: placeholder,
+        src: `${assetRoot}/4b.webp`,
         alt: 'A confined interior with enemies approaching through a doorway.',
         caption: 'Fewer immediate angles, less room to escape.',
         annotations: [],
@@ -77,7 +77,7 @@ export const re4Visuals = {
       'Replace with a gameplay capture showing a stagger-to-melee opportunity where nearby Ganados can also be displaced. The image should demonstrate that the kick changes the shape of the crowd, not only enemy health.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/5.webp`,
         alt: 'Leon kicking a staggered Ganado with nearby enemies within reach.',
         caption: 'A melee follow-up can buy space by disrupting several nearby threats.',
         annotations: [],
@@ -91,7 +91,7 @@ export const re4Visuals = {
       'Replace with a Chapter 5 house-defense capture showing an active entry point such as a boarded window, ladder, or upper-floor threat. This should illustrate how the encounter adds pressure without physically shrinking the room.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/6.webp`,
         alt: 'Leon defending the house with Luis, with boarded windows and another active entry point visible.',
         caption:
           'Boarding windows and removing ladders temporarily reduces one source of pressure while others remain active.',
@@ -106,7 +106,7 @@ export const re4Visuals = {
       'Replace with a clear gameplay capture of Leon parrying an enemy attack. The image should support the idea that the knife can recover a bad situation immediately.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/7.webp`,
         alt: 'Leon parrying a weapon attack with his knife at the moment of contact.',
         caption: 'The knife can restore control in the moment, but using it consumes future defensive capacity.',
         annotations: [],
@@ -120,7 +120,7 @@ export const re4Visuals = {
       'Replace with a UI screenshot showing Combat Knife durability or the Merchant repair option and peseta cost. This should make the future economic cost of defensive recovery visually explicit.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/8.webp`,
         alt: 'The Merchant repair menu showing Combat Knife durability and its peseta repair cost.',
         caption: 'Recovery carries forward into the economy when durability must later be repaired.',
         annotations: [],
@@ -134,13 +134,13 @@ export const re4Visuals = {
       'Replace left with the village during active combat. Replace right with the same or similar area after the bell. The comparison should show how the same space changes function when pressure disappears.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/9a.webp`,
         alt: 'Leon in the village during active combat, with approaching Ganados.',
         caption: 'During combat: attention is spent tracking threats.',
         annotations: [],
       },
       {
-        src: placeholder,
+        src: `${assetRoot}/9b.webp`,
         alt: 'The village after the bell, with clear paths to search the buildings.',
         caption: 'After the bell: the same space becomes readable as an exploration space.',
         annotations: [],
@@ -154,7 +154,7 @@ export const re4Visuals = {
       'Replace with an attaché-case screenshot showing weapons, ammunition, and crafting materials. This visual should support the transition from immediate survival to preparation for the next encounter.',
     images: [
       {
-        src: placeholder,
+        src: `${assetRoot}/10.webp`,
         alt: 'An open attaché case with weapons, ammunition and crafting materials arranged in its grid.',
         caption: 'Quiet intervals turn survival outcomes into preparation choices.',
         annotations: [],
