@@ -177,7 +177,7 @@ export const residentEvil4: ArticleContent = {
   heroSource: 'https://store.steampowered.com/app/2050650/Resident_Evil_4/',
   intro: [
     'What I find interesting about Resident Evil 4 Remake is that having more ways to fight does not make the player feel safe for long. A doorway, a kick, or a well-timed parry can make a difficult situation manageable, but each only solves part of the problem.',
-    'The remake creates pressure by letting the player buy temporary control rather than permanent safety. The village fight, the house defense with Luis, and the time between encounters show how combat and resource management support each other. This analysis focuses on the 2023 main campaign.',
+    'The remake creates pressure by letting the player buy temporary control rather than permanent safety. The village fight, the house defense with Luis, and the time between encounters show how combat and resource management support each other.',
   ],
   sections: [
     {
@@ -191,7 +191,7 @@ export const residentEvil4: ArticleContent = {
         { type: 'figure', visual: re4Visuals.positioning },
         {
           type: 'paragraph',
-          text: 'The shotgun house offers a different tradeoff. Its doorway makes enemies easier to track, and the W-870 upstairs gives the player another way to handle a crowd. However, enemies can enter through the building and its windows. Staying inside eventually becomes its own problem.',
+          text: 'The shotgun house offers a different tradeoff. Its doorway makes enemies easier to track, and the W-870 shotgun upstairs gives the player another way to handle a crowd. However, enemies can enter through the building and its windows. Staying inside eventually becomes its own problem.',
         },
         { type: 'figure', visual: re4Visuals.refuge },
         {
