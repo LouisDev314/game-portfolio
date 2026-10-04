@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: 'Louis Chan',
-  url: 'https://www.louisdev314.com/',
-  title: 'Louis Chan - Game Designer',
-  description: 'Game design portfolio for Louis Chan, featuring projects, design work, and creative collaborations.',
-  ogImage: '/pfp-1.jpg',
+  url: 'https://louischan.site/',
+  title: 'Louis Chan — Game Designer',
+  description: 'Game designer focused on narrative, gameplay, environmental storytelling, and level design.',
+  ogImage: '/og/portfolio-preview.png',
   email: 'louiscch314@gmail.com',
   links: {
     linkedIn: 'https://www.linkedin.com/in/louiscch/',

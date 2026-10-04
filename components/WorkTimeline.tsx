@@ -17,36 +17,6 @@ type Experience = {
 // Preserve the original chronological order.
 const experiences: Experience[] = [
   {
-    id: 'popbox-studio',
-    dates: 'March 2026 - Present',
-    role: 'Founder & Full Stack Engineer',
-    company: 'PopBox Studio',
-    companyUrl: 'https://popboxstudio.com/',
-    location: 'Calgary, AB',
-    workType: 'Remote',
-    tags: ['Product', 'Software'],
-    contributions: [
-      'Delivered the storefront, checkout, and order-management workflows end to end.',
-      'Built tools for managing products, orders, and fulfillment.',
-      'Worked through inventory and payment constraints to support reliable purchases.',
-    ],
-  },
-  {
-    id: 'bmo',
-    dates: 'March 2025 - March 2026',
-    role: 'Personal Banking Associate',
-    company: 'Bank of Montreal',
-    companyUrl: 'https://www.bmo.com/en-ca/main/personal/',
-    location: 'Calgary, AB',
-    workType: 'On-site',
-    tags: ['Client Services'],
-    contributions: [
-      'Analyzed client information to support lending and credit decisions.',
-      'Coordinated across internal systems and stakeholders under time constraints.',
-      'Balanced accurate processing with risk controls and compliance requirements.',
-    ],
-  },
-  {
     id: 'earn-alliance',
     dates: 'September 2024 - March 2025',
     role: 'Project Manager',
@@ -63,39 +33,9 @@ const experiences: Experience[] = [
     ],
   },
   {
-    id: 'vgt',
-    dates: 'August 2023 - September 2024',
-    role: 'Full Stack Developer',
-    company: 'Virtual Gaming Technology',
-    companyUrl: 'https://www.vgt.com.hk/en/',
-    location: 'Hong Kong',
-    workType: 'On-site',
-    tags: ['Software'],
-    contributions: [
-      'Reworked the frontend to improve responsiveness and the user experience.',
-      'Built services for real-time data and background processing.',
-      'Improved performance and stability in a live production environment.',
-    ],
-  },
-  {
-    id: 'future-successors',
-    dates: 'September 2022 - December 2022',
-    role: 'Software Engineer Intern',
-    company: 'Future Successors',
-    companyUrl: 'https://futuresuccessors.org/',
-    location: 'Atlanta, GA',
-    workType: 'Remote/On-site',
-    tags: ['Software'],
-    contributions: [
-      'Connected frontend features with backend and cloud services.',
-      'Refined data models and queries to improve performance.',
-      'Added validation and error handling to protect data integrity.',
-    ],
-  },
-  {
     id: 'microsoft',
     dates: 'June 2022 - September 2022',
-    role: 'Xbox Summer Camp Engineer',
+    role: 'Xbox Game Camp · Gameplay Prototyping',
     company: 'Microsoft · Xbox Game Camp',
     companyUrl: 'https://www.xbox.com/en-US/xbox-game-studios/game-camp',
     location: 'Atlanta, GA',
@@ -104,7 +44,7 @@ const experiences: Experience[] = [
     contributions: [
       'Rapidly prototyped and iterated on gameplay features.',
       'Implemented core systems for player interactions and game-state management.',
-      'Established shared development and code-review practices for the engineering team.',
+      'Collaborated on shared prototyping and iteration practices.',
     ],
   },
 ];
@@ -167,7 +107,7 @@ export function WorkTimeline() {
           Work Experience
         </h2>
         <p className="mt-2 text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-10">
-          My experience across game production and software helps me turn ideas into testable, practical design
+          My experience in game production, playtesting, and prototyping helps me turn ideas into practical design
           decisions.
         </p>
       </div>

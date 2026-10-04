@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 500,
-        height: 300,
-        alt: 'Louis Chan portfolio logo',
+        width: 1200,
+        height: 630,
+        alt: 'Louis Chan — Game Designer. Original atmospheric architectural artwork.',
       },
     ],
   },

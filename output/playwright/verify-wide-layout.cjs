@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- This is a CommonJS browser verification utility. */
 const { chromium } = require('C:/Users/louis/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs = require('node:fs');
 (async () => {
@@ -41,4 +42,3 @@ const fs = require('node:fs');
     console.log(JSON.stringify(results,null,2));
   } finally { await browser.close(); }
 })().catch(err=>{console.error(err);process.exitCode=1;});
-

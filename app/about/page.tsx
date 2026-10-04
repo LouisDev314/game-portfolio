@@ -12,8 +12,8 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center text-base leading-relaxed text-neutral-600 dark:text-neutral-400 md:mt-12 md:text-lg">
             <p>
               I’m Louis, a game designer focused on narrative, gameplay, level design, and emotional impact. I use
-              environmental storytelling to shape player experience, while my software engineering background helps me
-              prototype ideas and collaborate effectively with technical teams.
+              environmental storytelling to shape player experience, prototype ideas, and refine designs through
+              playtesting and collaboration.
             </p>
           </div>
         </section>

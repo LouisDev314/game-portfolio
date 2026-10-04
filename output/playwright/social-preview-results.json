@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "og:type": "website",
+    "og:site_name": "Louis Chan",
+    "og:title": "Louis Chan — Game Designer",
+    "og:description": "Game designer focused on narrative, gameplay, environmental storytelling, and level design.",
+    "og:image": "https://louischan.site/og/portfolio-preview.png",
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Louis Chan — Game Designer",
+    "twitter:description": "Game designer focused on narrative, gameplay, environmental storytelling, and level design.",
+    "twitter:image": "https://louischan.site/og/portfolio-preview.png"
+  },
+  "image": {
+    "width": 1200,
+    "height": 630,
+    "bytes": 258901
+  },
+  "routes": [
+    "/",
+    "/about",
+    "/projects",
+    "/projects/last-remains",
+    "/blogs/buying-time-resident-evil-4-remake"
+  ],
+  "mobileOverflow": false,
+  "articleCanonical": "preserved"
+}

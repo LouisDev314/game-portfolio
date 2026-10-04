@@ -33,9 +33,7 @@ const footerGroups: FooterGroup[] = [
   },
   {
     title: 'Projects',
-    links: projects.flatMap((project) =>
-      project.liveUrl ? [{ label: project.name, href: project.liveUrl, external: true }] : [],
-    ),
+    links: projects.map((project) => ({ label: project.name, href: `/projects/${project.slug}` })),
   },
   {
     title: 'Legal',

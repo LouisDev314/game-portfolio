@@ -1,12 +1,12 @@
 # Louis Chan — Game Design Portfolio
 
-My personal portfolio showcasing game design, production experience, and software development. It brings together selected projects, game analysis, and an interactive browser game, with a focus on narrative, gameplay, level design, and player experience.
+My personal portfolio showcasing game design and game production experience. It brings together selected projects, game analysis, and an interactive browser game, with a focus on narrative, gameplay, level design, and player experience.
 
 [Visit the portfolio](https://louischan.site/) · [LinkedIn](https://www.linkedin.com/in/louiscch/) · [itch.io](https://louischan.itch.io/)
 
 ## Features
 
-- **Project showcases:** dedicated pages for Last Remains, Paper Bridge, and PopBox Studio, with role highlights, media, and project links.
+- **Project showcases:** Last Remains, with production and playtesting highlights and project media.
 - **Design writing:** categorized Design Notes and Game Analysis, including an illustrated Resident Evil 4 breakdown.
 - **Orbit:** a desktop Three.js arena game built around surviving 30 seconds. Use WASD to move, the mouse to aim, click or hold to fire, Tab to pause, and R to restart after a run ends.
 - **About and experience:** background, work timeline, tools, and contact links.
@@ -90,7 +90,7 @@ docs/           Editorial review and performance notes
 
 Deploy as a Next.js application, with Vercel as the intended hosting platform. Configure the two Resend environment variables in the deployment environment to enable the contact form, then redeploy after changing them.
 
-The public portfolio link above uses `https://louischan.site/`. The canonical URL in `lib/site.ts` currently remains `https://www.louisdev314.com/`; update it to the intended production domain so generated metadata matches the deployment.
+The public portfolio and canonical metadata use `https://louischan.site/`, configured in `lib/site.ts`. Open Graph and Twitter/X cards share the static 1200 × 630 image at `public/og/portfolio-preview.png`. The preview uses original generated environmental artwork with composited system-sans typography; it is illustrative artwork, not a gameplay capture.
 
 ## Contact
 
