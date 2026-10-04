@@ -14,7 +14,7 @@ export function ProjectCardMedia({ video, poster }: ProjectCardMediaProps) {
   useEffect(() => {
     const container = containerRef.current;
     const media = videoRef.current;
-    if (!container || !media) return;
+    if (!container || !media || !video) return;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let visible = false;
     let disposed = false;

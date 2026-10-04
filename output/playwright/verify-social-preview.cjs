@@ -47,12 +47,21 @@ const base = process.env.TEST_BASE_URL || 'http://localhost:3001';
       const imageInfo = await sharp(image).metadata();
       assert.equal(imageInfo.width, 1200);
       assert.equal(imageInfo.height, 630);
+      for (const asset of ['/paper-bridge-logo.webp', '/store-logo.png']) {
+        assert.equal((await context.request.get(`${base}${asset}`)).status(), 200, `restored asset: ${asset}`);
+      }
       await page.screenshot({ path: 'output/playwright/social-home.png' });
-      const routes = ['/', '/about', '/projects', '/projects/last-remains', '/blogs/buying-time-resident-evil-4-remake'];
+      const routes = ['/', '/about', '/projects', '/projects/last-remains', '/projects/paper-bridge', '/projects/popbox-studio', '/blogs/buying-time-resident-evil-4-remake'];
       for (const route of routes) {
         const result = await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
         assert.equal(result.status(), 200, route);
-        assert.doesNotMatch(await page.locator('body').innerText(), new RegExp(['louis' + 'dev314', 'soft' + 'ware', 'engin' + 'eer', 'full.stack'].join('|'), 'i'), route);
+        assert.doesNotMatch(await page.locator('body').innerText(), /louisdev314/i, route);
+        if (route === '/' || route === '/about') assert.match(await page.locator('body').innerText(), /software engineering background/i);
+        if (route === '/about') {
+          for (const id of ['popbox-studio', 'bmo', 'earn-alliance', 'vgt', 'future-successors', 'microsoft']) {
+            assert.equal(await page.locator(`#${id}-role`).count(), 1, `restored experience: ${id}`);
+          }
+        }
         if (route === '/about') await page.screenshot({ path: 'output/playwright/social-about.png', fullPage: true });
       }
       assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'), 'https://louischan.site/blogs/buying-time-resident-evil-4-remake');

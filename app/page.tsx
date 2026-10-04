@@ -39,7 +39,7 @@ export default function Home() {
                 <ImagesBadge
                   text="View all →"
                   className="hover:underline"
-                  images={['/lastremains.webp']}
+                  images={['/lastremains.webp', '/paper-bridge-logo.webp', '/store-logo.png']}
                   folderSize={{ width: 24, height: 18 }}
                   teaserImageSize={{ width: 14, height: 10 }}
                   hoverImageSize={{ width: 36, height: 24 }}
@@ -70,8 +70,8 @@ export default function Home() {
               <div>
                 <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
                   I’m Louis, a game designer focused on narrative, gameplay, level design, and emotional impact. I use
-                  environmental storytelling to shape player experience, prototype ideas, and refine designs through
-                  playtesting and collaboration.
+                  environmental storytelling to shape player experience, while my software engineering background helps
+                  me prototype ideas and collaborate effectively with technical teams.
                 </p>
               </div>
 

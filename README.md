@@ -1,12 +1,12 @@
 # Louis Chan — Game Design Portfolio
 
-My personal portfolio showcasing game design and game production experience. It brings together selected projects, game analysis, and an interactive browser game, with a focus on narrative, gameplay, level design, and player experience.
+My personal game-design portfolio, supported by experience in game production and software engineering. It brings together selected projects, game analysis, and an interactive browser game, with a focus on narrative, gameplay, level design, and player experience. My engineering background supports prototyping, practical implementation, and collaboration with technical teams.
 
 [Visit the portfolio](https://louischan.site/) · [LinkedIn](https://www.linkedin.com/in/louiscch/) · [itch.io](https://louischan.itch.io/)
 
 ## Features
 
-- **Project showcases:** Last Remains, with production and playtesting highlights and project media.
+- **Project showcases:** Last Remains, plus Paper Bridge and PopBox Studio as supporting engineering work, with role highlights, media, and project links. Technical showcases use their own poster images rather than unrelated gameplay footage.
 - **Design writing:** categorized Design Notes and Game Analysis, including an illustrated Resident Evil 4 breakdown.
 - **Orbit:** a desktop Three.js arena game built around surviving 30 seconds. Use WASD to move, the mouse to aim, click or hold to fire, Tab to pause, and R to restart after a run ends.
 - **About and experience:** background, work timeline, tools, and contact links.

@@ -1,0 +1,4 @@
+[     354ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/04hi_next_dist_0a4z2qt._.js:776
+[     397ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/hmr?id=LNUs6za4IkS708tdRucit' failed: Error during WebSocket handshake: net::ERR_INVALID_HTTP_RESPONSE @ http://127.0.0.1:3000/_next/static/chunks/04hi_next_dist_client_1bp_d_b._.js:16348
+[     796ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/_next/static/chunks/04hi_next_dist_0a4z2qt._.js:776
+[     807ms] [ERROR] WebSocket connection to 'ws://127.0.0.1:3000/_next/hmr?id=BF3w02edwcedzq6vdIMy_' failed: Error during WebSocket handshake: net::ERR_INVALID_HTTP_RESPONSE @ http://127.0.0.1:3000/_next/static/chunks/04hi_next_dist_client_1bp_d_b._.js:16348
